@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-   <img src="<?php echo URLROOT; ?>/public/img/fixeto.png"/>
+    <a class="navbar-brand " href="#">
+   <img src="<?php echo URLROOT; ?>/public/img/logo/fixeto.png"/>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fa-solid fa-bars"></i>
