@@ -1,6 +1,7 @@
 :root{
     --white-color:#FFFFFF;
     --primary-color:#0083DE;
+    --bt-color:#F0A500;
 }
 /* start Navbar  */
 .navbar {
@@ -17,7 +18,7 @@
 .navbar .navbar-nav .nav-link:active,
 .navbar .navbar-nav .nav-link:focus,
 .navbar .navbar-nav .nav-link:hover{
-color: var(--primary-color); 
+color: var(--bt-color); 
 }
 .navbar .navbar-toggler{
 border-color:black;
@@ -26,6 +27,63 @@ border-color:black;
     box-shadow:none;
 }
 .navbar .navbar-toggler[aria-expanded="true"]{
-    border-color:var(--white-color);;
+    border-color:var(--white-color);
 }
 /* End Navbar  */
+
+/* start slider  */
+.carousel-caption {
+    margin-bottom: 104px;
+    
+}
+.ti{
+    color:var( --primary-color)!important;
+}
+
+/* test */
+
+.para-caros{
+  max-width: 700px;
+}
+
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+    }
+}
+@media (min-width: 820px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+    }
+}
+@media (max-width: 800px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+    }
+}
+
+/* End slider  */
