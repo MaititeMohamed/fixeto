@@ -111,13 +111,17 @@ body {
 
 /* start about Us  */
 
-.test {
-    color: #0083DE;
-}
-
-.imgh {}
-
 @media (max-width: 1198px) {}
 
 
 /* End about Us  */
+
+
+/* start WHY CHOOSE US */
+
+#whychooseUs {
+    background-color: #FAFAFA !important;
+}
+
+
+/* End WHY CHOOSE US */
