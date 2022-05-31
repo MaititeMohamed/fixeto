@@ -8,11 +8,19 @@ body {
     overflow-x: hidden;
 }
 
+
+/* ----------- start colorS--------------- */
+
 :root {
     --white-color: #FFFFFF;
     --primary-color: #0083DE;
     --bt-color: #F0A500;
 }
+
+.grennco{
+    color: #00ED39;
+}
+/* ----------- end colorS--------------- */
 
 body {
     width: 100vW;
@@ -125,3 +133,14 @@ body {
 
 
 /* End WHY CHOOSE US */
+
+
+/* start  OUR SERVICES */
+
+.OURSERVICES {
+    background-color: #0083DE !important;
+}
+
+
+
+/* End  OUR SERVICES */
