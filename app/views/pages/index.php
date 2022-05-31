@@ -79,28 +79,156 @@
 <section class="" id="whychooseUs">
   <div class="container p-5">
     <h1 class="pb-2 text-primary"> WHY CHOOSE US?</h1>
-  <div class="row">
-    <div class="col-md-12 col-lg-3 pb-lg-0 pb-4">
-    <h2 class="text-md-center text-lg-start text-center ">  <i class="fa-solid fa-house-chimney"></i></h2>
-      Deal with all tire malfunctions by repairing them on site or 
-      by transporting the tires to a specialized center
+    <div class="row">
+      <div class="col-md-12 col-lg-3 pb-lg-0 pb-4">
+        <h2 class="text-md-center text-lg-start text-center "> <i class="fa-solid fa-house-chimney"></i></h2>
+        Deal with all tire malfunctions by repairing them on site or
+        by transporting the tires to a specialized center
+      </div>
+      <div class="col-md-12 col-lg-3 pb-lg-0 pb-4">
+        <h2 class="text-md-center text-lg-start text-center "> <i class="fa-solid fa-house-chimney"></i></h2>
+        We charge the battery or replace it with a new battery
+      </div>
+      <div class="col-md-12 col-lg-3  pb-lg-0 pb-4">
+        <h2 class="text-md-center text-lg-start text-center "> <i class="fa-solid fa-house-chimney"></i></h2>
+        Customers can choose the desired surface type from a list of all
+        surface types to suit all types of vehicles.
+      </div>
+      <div class="col-md-12 col-lg-3  ">
+        <h2 class="text-md-center text-lg-start text-center "> <i class="fa-solid fa-house-chimney"></i></h2>
+        In-town or out-of-town gasoline or diesel delivery.
+      </div>
     </div>
-    <div class="col-md-12 col-lg-3 pb-lg-0 pb-4">
-    <h2 class="text-md-center text-lg-start text-center ">  <i class="fa-solid fa-house-chimney"></i></h2>
-    We charge the battery or replace it with a new battery
-    </div>
-    <div class="col-md-12 col-lg-3  pb-lg-0 pb-4">
-    <h2 class="text-md-center text-lg-start text-center ">  <i class="fa-solid fa-house-chimney"></i></h2>
-      Customers can choose the desired surface type from a list of all 
-      surface types to suit all types of vehicles.
-    </div>
-    <div class="col-md-12 col-lg-3  ">
-    <h2 class="text-md-center text-lg-start text-center ">  <i class="fa-solid fa-house-chimney"></i></h2>
-      In-town or out-of-town gasoline or diesel delivery.
-    </div>
-  </div>
   </div>
 
 </section>
 <!-- End WHY CHOOSE US -->
+
+<!-- start OUR SERVICES  -->
+<section class=" p-5 container">
+   <h1 class="d-flex justify-content-end mt-3 text-primary" style="margin-bottom: -7px;">OUR <span>SERVICES</span> </h1>
+  <div class="OURSERVICES">
+    <div class="row  p-3 ">
+      <!--############################### -->
+      <div class="col-md-12  col-lg-6  ">
+        <div  >
+          <img  src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_04.jpg" class="d-block w-100 imgh " alt="...">
+        </div>
+
+      </div>
+
+      <div class="col-md-12  col-lg-6 about d-flex align-items-center   ">
+        <div class=" ">
+          <h3 class="grennco">System Installation</h3>
+
+          <p> The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his 
+            holder were ever tied together. This improvement upon the original usage.
+
+          </p>
+        </div>
+      </div>
+      <!--############################### -->
+      <!--############################### -->
+     <div class="d-flex flex-column flex-lg-row-reverse">
+          <div class="col-md-12  col-lg-6    ">
+            <div  >
+              <img  src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_05.jpg" class="d-block w-100 imgh " alt="...">
+            </div>
+
+          </div>
+
+          <div class="col-md-12  col-lg-6 about d-flex align-items-center   ">
+            <div class=" ">
+              <h3 class="grennco">Repair</h3>
+
+              <p> The monkey-rope is found in all whalers; but it was only
+                in the Pequod that the monkey and his holder were ever tied
+                together. This improvement upon the original usage.
+
+              </p>
+            </div>
+          </div>
+      </div>
+      <!--############################### -->
+
+
+      <div class="col-md-12  col-lg-6 ">
+        <div>
+          <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_06.jpg" class="d-block w-100 imgh " alt="...">
+        </div>
+
+      </div>
+
+      <div class="col-md-12  col-lg-6 about d-flex align-items-center   ">
+        <div class=" ">
+          <h3 class="grennco">Fan Replacement</h3>
+
+          <p> The monkey-rope is found in all whalers; but it was
+             only in the Pequod that the monkey and his holder were
+              ever tied together.
+             This improvement upon the original usage. .
+
+          </p>
+        </div>
+      </div>
+      <!--############################### -->
+      <!--############################### -->
+      <div class="d-flex flex-column flex-lg-row-reverse">
+      <div class="col-md-12  col-lg-6 ">
+        <div>
+          <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_02.jpg" class="d-block w-100 imgh " alt="...">
+
+        </div>
+
+      </div>
+      <div class="col-md-12  col-lg-6 about d-flex align-items-center   ">
+        <div class=" ">
+          <h3 class="grennco">Heater Repair</h3>
+
+          <p> The monkey-rope is found in all whalers; 
+            but it was only in the Pequod that the monkey
+             and his holder were ever tied together. This improvement
+             upon the original usage
+
+          </p>
+        </div>
+      </div>
+      </div>
+      <!--############################### -->
+
+
+    </div>
+
+  </div>
+
+
+<div class="d-flex justify-content-center mt-3">
+<button type="button" class="btn btn-warning ">Service</button>
+
+</div>
+
+</section>
+<!-- End OUR SERVICES -->
+
+<!--  start download app  -->
+<section class="" id="whychooseUs">
+  <div class="container ">
+ 
+    <div class="row p-3  justify-content-center">
+      <div class="col-md-12 col-lg-3 pb-lg-0 ">
+      <img src="<?php echo URLROOT; ?>/public/img/logo/Untitled_design.png" class="d-block w-100 imgh " alt="...">
+
+      </div>
+      
+      <div class=" d-flex justify-content-center align-items-center gap-3 mt-3 ">
+      <button type="button" class="btn btn-dark btn-lg">   <i class="fab fa-google-play"></i> Google Play</button>
+
+      <button type="button " class="btn btn-dark btn-lg   ">  <i class="fab fa-apple"></i>  App Store</button>
+      </div>
+      
+    </div>
+  </div>
+
+</section>
+<!--  end download app  -->
 <?php require APPROOT . '/views/inc/footer.php'; ?>
