@@ -121,7 +121,7 @@
         <div class=" ">
           <h3 class="grennco">System Installation</h3>
 
-          <p> The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his
+          <p class="text-light" > The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his
             holder were ever tied together. This improvement upon the original usage.
 
           </p>
@@ -141,7 +141,7 @@
           <div class=" ">
             <h3 class="grennco">Repair</h3>
 
-            <p> The monkey-rope is found in all whalers; but it was only
+            <p class="text-light" > The monkey-rope is found in all whalers; but it was only
               in the Pequod that the monkey and his holder were ever tied
               together. This improvement upon the original usage.
 
@@ -163,7 +163,7 @@
         <div class=" ">
           <h3 class="grennco">Fan Replacement</h3>
 
-          <p> The monkey-rope is found in all whalers; but it was
+          <p class="text-light" > The monkey-rope is found in all whalers; but it was
             only in the Pequod that the monkey and his holder were
             ever tied together.
             This improvement upon the original usage. .
@@ -185,7 +185,7 @@
           <div class=" ">
             <h3 class="grennco">Heater Repair</h3>
 
-            <p> The monkey-rope is found in all whalers;
+            <p class="text-light"> The monkey-rope is found in all whalers;
               but it was only in the Pequod that the monkey
               and his holder were ever tied together. This improvement
               upon the original usage
@@ -254,4 +254,40 @@
 
 </section>
 <!-- end statistique  -->
+
+<!-- start Brands We Repair  -->
+<section class="" id="whychooseUs">
+  <div class="container   p-5">
+
+    <h1 class="pb-2 text-primary text-center"> Brands We Repair</h1>
+    <h6 class="text-center text-secondary">No matter where you bought it, we can fix it. We repair most major brands, makes, and models.</h6>
+    <div class="row d-flex justify-content-around">
+      <div class="col-md-12 col-lg-2 pb-lg-0  mb-sm-3">
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/1 1.png" alt=""></h2>
+      </div>
+
+      <div class="col-md-12 col-lg-2 pb-lg-0  mb-sm-3">
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/2 1.png" alt=""></h2>
+    </div>
+
+      <div class="col-md-12 col-lg-2  pb-lg-0 mb-sm-3 ">
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/3 1.png" alt=""></h2>
+      </div>
+
+      <div class="col-md-12 col-lg-2  mb-sm-3 ">
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/4 1.png" alt=""></h2>
+      </div>
+       
+
+      <div class="col-md-12 col-lg-2   mb-sm-3">
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/5 1.png" alt=""></h2>
+  
+      </div>
+      
+  
+    </div>
+  </div>
+
+</section>
+<!-- end Brands We Repair  -->
 <?php require APPROOT . '/views/inc/footer.php'; ?>
