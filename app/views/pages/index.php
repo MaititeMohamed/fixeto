@@ -106,13 +106,13 @@
 
 <!-- start OUR SERVICES  -->
 <section class=" p-5 container">
-   <h1 class="d-flex justify-content-end mt-3 text-primary" style="margin-bottom: -7px;">OUR <span>SERVICES</span> </h1>
+  <h1 class="d-flex justify-content-end mt-3 text-primary" style="margin-bottom: -7px;">OUR <span>SERVICES</span> </h1>
   <div class="OURSERVICES">
     <div class="row  p-3 ">
       <!--############################### -->
       <div class="col-md-12  col-lg-6  ">
-        <div  >
-          <img  src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_04.jpg" class="d-block w-100 imgh " alt="...">
+        <div>
+          <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_04.jpg" class="d-block w-100 imgh " alt="...">
         </div>
 
       </div>
@@ -121,7 +121,7 @@
         <div class=" ">
           <h3 class="grennco">System Installation</h3>
 
-          <p> The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his 
+          <p> The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his
             holder were ever tied together. This improvement upon the original usage.
 
           </p>
@@ -129,25 +129,25 @@
       </div>
       <!--############################### -->
       <!--############################### -->
-     <div class="d-flex flex-column flex-lg-row-reverse">
-          <div class="col-md-12  col-lg-6    ">
-            <div  >
-              <img  src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_05.jpg" class="d-block w-100 imgh " alt="...">
-            </div>
-
+      <div class="d-flex flex-column flex-lg-row-reverse">
+        <div class="col-md-12  col-lg-6    ">
+          <div>
+            <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_05.jpg" class="d-block w-100 imgh " alt="...">
           </div>
 
-          <div class="col-md-12  col-lg-6 about d-flex align-items-center   ">
-            <div class=" ">
-              <h3 class="grennco">Repair</h3>
+        </div>
 
-              <p> The monkey-rope is found in all whalers; but it was only
-                in the Pequod that the monkey and his holder were ever tied
-                together. This improvement upon the original usage.
+        <div class="col-md-12  col-lg-6 about d-flex align-items-center   ">
+          <div class=" ">
+            <h3 class="grennco">Repair</h3>
 
-              </p>
-            </div>
+            <p> The monkey-rope is found in all whalers; but it was only
+              in the Pequod that the monkey and his holder were ever tied
+              together. This improvement upon the original usage.
+
+            </p>
           </div>
+        </div>
       </div>
       <!--############################### -->
 
@@ -164,9 +164,9 @@
           <h3 class="grennco">Fan Replacement</h3>
 
           <p> The monkey-rope is found in all whalers; but it was
-             only in the Pequod that the monkey and his holder were
-              ever tied together.
-             This improvement upon the original usage. .
+            only in the Pequod that the monkey and his holder were
+            ever tied together.
+            This improvement upon the original usage. .
 
           </p>
         </div>
@@ -174,25 +174,25 @@
       <!--############################### -->
       <!--############################### -->
       <div class="d-flex flex-column flex-lg-row-reverse">
-      <div class="col-md-12  col-lg-6 ">
-        <div>
-          <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_02.jpg" class="d-block w-100 imgh " alt="...">
+        <div class="col-md-12  col-lg-6 ">
+          <div>
+            <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_02.jpg" class="d-block w-100 imgh " alt="...">
+
+          </div>
 
         </div>
+        <div class="col-md-12  col-lg-6 about d-flex align-items-center   ">
+          <div class=" ">
+            <h3 class="grennco">Heater Repair</h3>
 
-      </div>
-      <div class="col-md-12  col-lg-6 about d-flex align-items-center   ">
-        <div class=" ">
-          <h3 class="grennco">Heater Repair</h3>
+            <p> The monkey-rope is found in all whalers;
+              but it was only in the Pequod that the monkey
+              and his holder were ever tied together. This improvement
+              upon the original usage
 
-          <p> The monkey-rope is found in all whalers; 
-            but it was only in the Pequod that the monkey
-             and his holder were ever tied together. This improvement
-             upon the original usage
-
-          </p>
+            </p>
+          </div>
         </div>
-      </div>
       </div>
       <!--############################### -->
 
@@ -202,10 +202,10 @@
   </div>
 
 
-<div class="d-flex justify-content-center mt-3">
-<button type="button" class="btn btn-warning ">Service</button>
+  <div class="d-flex justify-content-center mt-3">
+    <button type="button" class="btn btn-warning ">Service</button>
 
-</div>
+  </div>
 
 </section>
 <!-- End OUR SERVICES -->
@@ -213,22 +213,45 @@
 <!--  start download app  -->
 <section class="" id="whychooseUs">
   <div class="container ">
- 
+
     <div class="row p-3  justify-content-center">
       <div class="col-md-12 col-lg-3 pb-lg-0 ">
-      <img src="<?php echo URLROOT; ?>/public/img/logo/Untitled_design.png" class="d-block w-100 imgh " alt="...">
+        <img src="<?php echo URLROOT; ?>/public/img/logo/Untitled_design.png" class="d-block w-100 imgh " alt="...">
 
       </div>
-      
+
       <div class=" d-flex justify-content-center align-items-center gap-3 mt-3 ">
-      <button type="button" class="btn btn-dark btn-lg">   <i class="fab fa-google-play"></i> Google Play</button>
+        <button type="button" class="btn btn-dark btn-lg"> <i class="fab fa-google-play"></i> Google Play</button>
 
-      <button type="button " class="btn btn-dark btn-lg   ">  <i class="fab fa-apple"></i>  App Store</button>
+        <button type="button " class="btn btn-dark btn-lg   "> <i class="fab fa-apple"></i> App Store</button>
       </div>
-      
+
     </div>
   </div>
 
 </section>
 <!--  end download app  -->
+
+<!-- start statistique  -->
+<section class="" id="statistique">
+  <div class="container p-5">
+    <h2 class="pb-2  text-center">Fast easy and dependable repairs</h2>
+    <div class="row">
+          <div class="col-md-12 col-lg-4 pb-lg-0 pb-4">
+            <h2 class="text-md-center text-lg-start text-center ">550,000+</h2>
+            <p class="text-md-center text-lg-start text-center ">Appliances Repaireed</p>
+          </div>
+          <div class="col-md-12 col-lg-4 pb-lg-0 pb-4">
+            <h2 class="text-md-center text-lg-start text-center ">OVER 70%</h2>
+            <p class="text-md-center text-lg-start text-center ">Repaired druing first visit</p>
+          </div>
+          <div class="col-md-12 col-lg-4  pb-lg-0 pb-4">
+            <h2 class="text-md-center text-lg-start text-center ">OVER 60%</h2>
+            <p class="text-md-center text-lg-start text-center ">Fixed within 3 days</p>
+          </div>
+    </div>
+  </div>
+
+</section>
+<!-- end statistique  -->
 <?php require APPROOT . '/views/inc/footer.php'; ?>
