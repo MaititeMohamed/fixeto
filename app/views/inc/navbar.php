@@ -14,18 +14,18 @@
         </li>
 
         <li class="nav-item">
-        <a class="nav-link" href="<?php echo URLROOT; ?>/pages/about">About</a>
+        <a class="nav-link" href="#AboutUs">About</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="#OURSERVICES">Services</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-2" href="#">Regester</a>
         </li>
        
        

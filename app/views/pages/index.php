@@ -14,7 +14,7 @@
 
       <img src="<?php echo URLROOT; ?>/public/img/slider/image_01.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption  d-md-block ">
-        <h5 class="ti">Logistique & Bord de route Prestations d'assistance.</h5>
+        <h1 class="ti">Logistics & Roadside Assistance services.</h1>
 
 
         <button type="button" class="btn btn-warning">Service</button>
@@ -24,14 +24,14 @@
 
       <img src="<?php echo URLROOT; ?>/public/img/slider/image_02.jpg" class="d-block w-100 " alt="...">
       <div class="carousel-caption  d-md-block ">
-        <h5 class="ti">Logistique & Bord de route Prestations d'assistance.</h5>
+        <h1 class="ti">Logistics & Roadside Assistance services.</h1>
         <button type="button" class="btn btn-warning">Service</button>
       </div>
     </div>
     <div class="carousel-item">
       <img src="<?php echo URLROOT; ?>/public/img/slider/image_03.jpg" class="d-block w-100 " alt="...">
       <div class="carousel-caption  d-md-block ">
-        <h5 class="ti">Logistique & Bord de route Prestations d'assistance.</h5>
+        <h1 class="ti">Logistics & Roadside Assistance services.</h1>
         <button type="button" class="btn btn-warning">Service</button>
       </div>
     </div>
@@ -48,7 +48,7 @@
 <!-- slide start  -->
 
 <!-- start about Us -->
-<section class="container p-5 ">
+<section class="container p-5 " id="AboutUs">
   <div class="row   ">
     <div class="col-md-12  col-lg-6 ">
       <div>
@@ -62,12 +62,7 @@
       <div class="mt-4   ">
         <h3>Fixeto</h3>
         <h1 class=" text-primary">About Us</h1>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt velit mauris. Integer
-          mollis tellus blandit, luctus lorem quis, lacinia magna. Nam ut volutpat ipsum, at scelerisque
-          tellus. Vivamus mattis est libero,
-          Sed hendrerit, odio sed congue consectetur, felis mi finibus enim, in egestas justo lacus sed sapien.
-          In pharetra sollicitudin leo, molestie molestie sapien lacinia sed. Suspendisse sit amet purus sit
-
+        <p>An electronic platform that allows road users to reach the mechanic easily and in less time.
         </p>
       </div>
     </div>
@@ -78,24 +73,24 @@
 <!-- start WHY CHOOSE US -->
 <section class="" id="whychooseUs">
   <div class="container p-5">
-    <h1 class="pb-2 text-primary"> WHY CHOOSE US?</h1>
+    <h1 class="pb-2 text-primary pb-3"> WHY CHOOSE US?</h1>
     <div class="row">
       <div class="col-md-12 col-lg-3 pb-lg-0 pb-4">
-        <h2 class="text-md-center text-lg-start text-center "> <i class="fa-solid fa-house-chimney"></i></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/serviceimg/Vector (4).png" alt=""></h2>
         Deal with all tire malfunctions by repairing them on site or
         by transporting the tires to a specialized center
       </div>
       <div class="col-md-12 col-lg-3 pb-lg-0 pb-4">
-        <h2 class="text-md-center text-lg-start text-center "> <i class="fa-solid fa-house-chimney"></i></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/serviceimg/Vector (3).png" alt=""></h2>
         We charge the battery or replace it with a new battery
       </div>
       <div class="col-md-12 col-lg-3  pb-lg-0 pb-4">
-        <h2 class="text-md-center text-lg-start text-center "> <i class="fa-solid fa-house-chimney"></i></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/serviceimg/Vector (1).png" alt=""></h2>
         Customers can choose the desired surface type from a list of all
         surface types to suit all types of vehicles.
       </div>
       <div class="col-md-12 col-lg-3  ">
-        <h2 class="text-md-center text-lg-start text-center "> <i class="fa-solid fa-house-chimney"></i></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/serviceimg/Vector.png" alt=""></h2>
         In-town or out-of-town gasoline or diesel delivery.
       </div>
     </div>
@@ -105,7 +100,7 @@
 <!-- End WHY CHOOSE US -->
 
 <!-- start OUR SERVICES  -->
-<section class=" p-5 container">
+<section class=" p-5 container" id="OURSERVICES">
   <h1 class="d-flex justify-content-end mt-3 text-primary" style="margin-bottom: -7px;">OUR <span>SERVICES</span> </h1>
   <div class="OURSERVICES">
     <div class="row  p-3 ">
@@ -234,9 +229,9 @@
 
 <!-- start statistique  -->
 <section class="" id="statistique">
-  <div class="container p-5">
+  <div class="container  p-5">
     <h2 class="pb-2  text-center">Fast easy and dependable repairs</h2>
-    <div class="row">
+    <div class="row ms-lg-5 ">
           <div class="col-md-12 col-lg-4 pb-lg-0 pb-4">
             <h2 class="text-md-center text-lg-start text-center ">550,000+</h2>
             <p class="text-md-center text-lg-start text-center ">Appliances Repaireed</p>

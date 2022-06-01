@@ -152,7 +152,15 @@ body {
     color: #FFFFFF;
 }
 /* end statistique  */
-
+/* scroll bars */
+::-webkit-scrollbar{
+    background-color:gray;
+}
+::-webkit-scrollbar-thumb{
+    background: #0083DE ;
+    border-radius: 10px;
+}
+/* scroll bars */
 
 /* start Brands We Repair  */
 
