@@ -12,7 +12,7 @@
   <div id="header-carousel" class="carousel-inner md-h-100">
     <div class="carousel-item active">
 
-      <img src="<?php echo URLROOT; ?>/public/img/slider/image_01.jpg" class="d-block w-100" alt="...">
+      <img src="<?php echo URLROOT; ?>/public/img/slider/image_01.jpg" class="d-block w-100" alt="img">
       <div class="carousel-caption  d-md-block ">
         <h1 class="ti">Logistics & Roadside Assistance services.</h1>
 
@@ -22,14 +22,14 @@
     </div>
     <div class="carousel-item">
 
-      <img src="<?php echo URLROOT; ?>/public/img/slider/image_02.jpg" class="d-block w-100 " alt="...">
+      <img src="<?php echo URLROOT; ?>/public/img/slider/image_02.jpg" class="d-block w-100 " alt="img">
       <div class="carousel-caption  d-md-block ">
         <h1 class="ti">Logistics & Roadside Assistance services.</h1>
         <button type="button" class="btn btn-warning">Service</button>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="<?php echo URLROOT; ?>/public/img/slider/image_03.jpg" class="d-block w-100 " alt="...">
+      <img src="<?php echo URLROOT; ?>/public/img/slider/image_03.jpg" class="d-block w-100 " alt="img">
       <div class="carousel-caption  d-md-block ">
         <h1 class="ti">Logistics & Roadside Assistance services.</h1>
         <button type="button" class="btn btn-warning">Service</button>
@@ -52,7 +52,7 @@
   <div class="row   ">
     <div class="col-md-12  col-lg-6 ">
       <div>
-        <img src="<?php echo URLROOT; ?>/public/img/All/image_01.jpg" class="d-block w-100 imgh " alt="...">
+        <img src="<?php echo URLROOT; ?>/public/img/All/image_01.jpg" class="d-block w-100 imgh " alt="img">
 
       </div>
 
@@ -76,21 +76,21 @@
     <h1 class="pb-2 text-primary pb-3"> WHY CHOOSE US?</h1>
     <div class="row">
       <div class="col-md-12 col-lg-3 pb-lg-0 pb-4">
-        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/serviceimg/Vector (4).png" alt=""></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/serviceimg/Vector (4).png" alt="img"></h2>
         Deal with all tire malfunctions by repairing them on site or
         by transporting the tires to a specialized center
       </div>
       <div class="col-md-12 col-lg-3 pb-lg-0 pb-4">
-        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/serviceimg/Vector (3).png" alt=""></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/serviceimg/Vector (3).png" alt="img"></h2>
         We charge the battery or replace it with a new battery
       </div>
       <div class="col-md-12 col-lg-3  pb-lg-0 pb-4">
-        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/serviceimg/Vector (1).png" alt=""></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/serviceimg/Vector (1).png" alt="img"></h2>
         Customers can choose the desired surface type from a list of all
         surface types to suit all types of vehicles.
       </div>
       <div class="col-md-12 col-lg-3  ">
-        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/serviceimg/Vector.png" alt=""></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/serviceimg/Vector.png" alt="img"></h2>
         In-town or out-of-town gasoline or diesel delivery.
       </div>
     </div>
@@ -107,7 +107,7 @@
       <!--############################### -->
       <div class="col-md-12  col-lg-6  ">
         <div>
-          <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_04.jpg" class="d-block w-100 imgh " alt="...">
+          <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_04.jpg" class="d-block w-100 imgh " alt="img">
         </div>
 
       </div>
@@ -127,7 +127,7 @@
       <div class="d-flex flex-column flex-lg-row-reverse">
         <div class="col-md-12  col-lg-6    ">
           <div>
-            <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_05.jpg" class="d-block w-100 imgh " alt="...">
+            <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_05.jpg" class="d-block w-100 imgh " alt="img">
           </div>
 
         </div>
@@ -149,7 +149,7 @@
 
       <div class="col-md-12  col-lg-6 ">
         <div>
-          <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_06.jpg" class="d-block w-100 imgh " alt="...">
+          <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_06.jpg" class="d-block w-100 imgh " alt="img">
         </div>
 
       </div>
@@ -171,7 +171,7 @@
       <div class="d-flex flex-column flex-lg-row-reverse">
         <div class="col-md-12  col-lg-6 ">
           <div>
-            <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_02.jpg" class="d-block w-100 imgh " alt="...">
+            <img src="<?php echo URLROOT; ?>/public/img/OURSERVICES/image_02.jpg" class="d-block w-100 imgh " alt="img">
 
           </div>
 
@@ -258,24 +258,24 @@
     <h6 class="text-center text-secondary">No matter where you bought it, we can fix it. We repair most major brands, makes, and models.</h6>
     <div class="row d-flex justify-content-around">
       <div class="col-md-12 col-lg-2 pb-lg-0  mb-sm-3">
-        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/1 1.png" alt=""></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/1 1.png" alt="img"></h2>
       </div>
 
       <div class="col-md-12 col-lg-2 pb-lg-0  mb-sm-3">
-        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/2 1.png" alt=""></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/2 1.png" alt="img"></h2>
     </div>
 
       <div class="col-md-12 col-lg-2  pb-lg-0 mb-sm-3 ">
-        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/3 1.png" alt=""></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/3 1.png" alt="img"></h2>
       </div>
 
       <div class="col-md-12 col-lg-2  mb-sm-3 ">
-        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/4 1.png" alt=""></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/4 1.png" alt="img"></h2>
       </div>
        
 
       <div class="col-md-12 col-lg-2   mb-sm-3">
-        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/5 1.png" alt=""></h2>
+        <h2 class="text-md-center text-lg-start text-center "> <img src="<?php echo URLROOT; ?>/public/img/BrandsRepair/5 1.png" alt="img"></h2>
   
       </div>
       
