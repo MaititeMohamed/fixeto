@@ -19,4 +19,15 @@
 
       $this->view('pages/about', $data);
     }
+ 
+
+
+    // mechaniclist 
+    public function mechaniclist(){
+      $data = [
+        'title' => 'About Us'
+      ];
+
+      $this->view('pages/mechaniclist', $data);
+    }
   }
