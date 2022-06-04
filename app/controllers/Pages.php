@@ -25,9 +25,18 @@
     // mechaniclist 
     public function mechaniclist(){
       $data = [
-        'title' => 'About Us'
+        'title' => 'mechaniclist '
       ];
 
       $this->view('pages/mechaniclist', $data);
+    }
+    //mechanicalprofile
+   
+    public function mechanicalprofile(){
+      $data = [
+        'title' => 'mechanicalprofile '
+      ];
+
+      $this->view('pages/mechanicalprofile', $data);
     }
   }
