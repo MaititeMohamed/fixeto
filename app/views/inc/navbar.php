@@ -25,7 +25,7 @@
           <a class="nav-link" href="#">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link me-2" href="#">Regester</a>
+          <a class="nav-link me-2" href="<?php echo URLROOT; ?>/users/register">Regester</a>
         </li>
        
        
