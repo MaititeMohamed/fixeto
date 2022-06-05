@@ -12,16 +12,14 @@
       $this->view('pages/index', $data);
     }
 
-    public function about(){
-      $data = [
-        'title' => 'About Us'
-      ];
+    // public function about(){
+    //   $data = [
+    //     'title' => 'About Us'
+    //   ];
 
-      $this->view('pages/about', $data);
-    }
+    //   $this->view('pages/about', $data);
+    // }
  
-
-
     // mechaniclist 
     public function mechaniclist(){
       $data = [
@@ -38,5 +36,13 @@
       ];
 
       $this->view('pages/mechanicalprofile', $data);
+    }
+    // dashboard
+    public function dashboard(){
+      $data = [
+        'title' => 'dashboard '
+      ];
+
+      $this->view('pages/dashboard', $data);
     }
   }
