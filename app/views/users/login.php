@@ -14,8 +14,8 @@
           </div>    
           <div class="form-group">
               <label>Password:<sup>*</sup></label>
-              <input type="password" name="password" class="form-control form-control-lg <?php echo (!empty($data['passworde_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['password']; ?>">
-              <span class="invalid-feedback"><?php echo $data['passworde_error']; ?></span>
+              <input type="password" name="password" class="form-control form-control-lg <?php echo (!empty($data['password_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['password']; ?>">
+              <span class="invalid-feedback"><?php echo $data['password_error']; ?></span>
           </div>
           <div class="form-row  d-flex mt-3">
             <div class="col">
