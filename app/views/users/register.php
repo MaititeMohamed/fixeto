@@ -1,7 +1,7 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <!-- start form register  -->
-<div class="container-fluid  bg-light">
-<div class="row  mb-3">
+<div class="container-fluid  bg-light   pb-4">
+<div class="row ">
   <div class="col-md-6 mx-auto">
     <div class="card card-body bg-light mt-5">
       <h2>Create An Account</h2>
@@ -57,5 +57,6 @@
     </div>
   </div>
   </div>
+</div>
 <!-- end form register  -->
 <?php require APPROOT . '/views/inc/footer.php'; ?>
