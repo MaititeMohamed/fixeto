@@ -11,7 +11,6 @@ class Users extends Controller
         //check for POST
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //Process form
-           
             // Sanitize POST
             $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             //Init Data 
@@ -42,11 +41,10 @@ class Users extends Controller
             if (empty($data['phone'])) {
                 $data['phone_error'] = 'Please enter your phone.';
             }
-             // Validate email
-             if(empty($data['Email'])){
+            // Validate email
+            if (empty($data['Email'])) {
                 $data['Email_error'] = 'Please enter an email';
-               
-                }
+            }
             // Validate password
             if (empty($data['password'])) {
                 $data['password_error'] = 'Please enter a password.';
@@ -62,13 +60,13 @@ class Users extends Controller
                 }
             }
             // Make sure errors are empty
-        if(empty($data['FirstName_error']) && empty($data['passworde_error']) && empty($data['LaststName_error']) && empty($data['Email_error'])  && empty($data['phone_error'])  && empty($data['confirm_password_error'])){
-            // SUCCESS - Proceed to insert
-            die('submeted');
-        }else{
-            // Load View
-          $this->view('users/register', $data);
-        }
+            if (empty($data['FirstName_error']) && empty($data['passworde_error']) && empty($data['LaststName_error']) && empty($data['Email_error'])  && empty($data['phone_error'])  && empty($data['confirm_password_error'])) {
+                // SUCCESS - Proceed to insert
+                die('submeted');
+            } else {
+                // Load View
+                $this->view('users/register', $data);
+            }
         } else {
             //Init Data 
             $data = [
@@ -96,7 +94,33 @@ class Users extends Controller
         //check for POST
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //Process form
+            // Sanitize POST
+             $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            //Init Data 
+            $data = [
 
+                'Email' => trim($_POST['Email']),
+                'password' => trim($_POST['password']),
+                'password_error' => '',
+                'Email_error' => ''
+
+            ];
+            // Validate email
+            if (empty($data['Email'])) {
+                $data['Email_error'] = 'Please enter an email';
+            }
+            // Validate password
+            if (empty($data['password'])) {
+                $data['password_error'] = 'Please enter a password.';
+            } 
+              // Make sure errors are empty
+              if (empty($data['passworde_error'])  && empty($data['Email_error'])) {
+                // SUCCESS - Proceed to insert
+                die('submeted');
+            } else {
+                // Load View
+                $this->view('users/login', $data);
+            }
         } else {
             //Init Data 
             $data = [
