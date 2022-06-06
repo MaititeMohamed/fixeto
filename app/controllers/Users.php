@@ -46,11 +46,10 @@ class Users extends Controller
             // Validate email
             if (empty($data['Email'])) {
                 $data['Email_error'] = 'Please enter an email';
-            }else{
+            } else {
                 // check if email  exist
-                if($this->userModle->findUserByEmail($data['Email'])){
-                    $data['Email_error']= 'Email is already exist';
-
+                if ($this->userModle->findUserByEmail($data['Email'])) {
+                    $data['Email_error'] = 'Email is already exist';
                 }
             }
             // Validate password
@@ -68,9 +67,21 @@ class Users extends Controller
                 }
             }
             // Make sure errors are empty
-            if (empty($data['FirstName_error']) && empty($data['passworde_error']) && empty($data['LaststName_error']) && empty($data['Email_error'])  && empty($data['phone_error'])  && empty($data['confirm_password_error'])) {
+            if (
+                empty($data['FirstName_error']) && empty($data['passworde_error']) && empty($data['LaststName_error'])
+                && empty($data['Email_error'])  && empty($data['phone_error'])  && empty($data['confirm_password_error'])
+            ) {
                 // SUCCESS - Proceed to insert
-                die('submeted');
+
+                // Hash Password
+                $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+                //Execute
+                if ($this->userModle->register($data)) {
+                    // Redirect to login
+                    redirect('users/login');
+                } else {
+                    die('Something went wrong');
+                }
             } else {
                 // Load View
                 $this->view('users/register', $data);
@@ -90,7 +101,6 @@ class Users extends Controller
                 'Email_error' => '',
                 'phone_error' => '',
                 'confirm_password_error' => ''
-
             ];
             //load view
             $this->view('users/register', $data);
@@ -103,7 +113,7 @@ class Users extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //Process form
             // Sanitize POST
-             $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             //Init Data 
             $data = [
 
@@ -120,9 +130,9 @@ class Users extends Controller
             // Validate password
             if (empty($data['password'])) {
                 $data['password_error'] = 'Please enter a password.';
-            } 
-              // Make sure errors are empty
-              if (empty($data['passworde_error'])  && empty($data['Email_error'])) {
+            }
+            // Make sure errors are empty
+            if (empty($data['passworde_error'])  && empty($data['Email_error'])) {
                 // SUCCESS - Proceed to insert
                 die('submeted');
             } else {
