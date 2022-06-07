@@ -77,6 +77,8 @@ class Users extends Controller
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
                 //Execute
                 if ($this->userModle->register($data)) {
+                    //add To User table 
+                    $this->userModle->addTotableUser($data['Email']);
                     // Redirect to login
                     redirect('users/login');
                 } else {
