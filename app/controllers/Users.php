@@ -5,7 +5,7 @@ class Users extends Controller
     public function __construct()
     {
         //Load model
-        $this->userModle = $this->model('User');
+        $this->userModel = $this->model('User');
     }
     //register methode 
     public function register()
@@ -48,7 +48,7 @@ class Users extends Controller
                 $data['Email_error'] = 'Please enter an email';
             } else {
                 // check if email  exist
-                if ($this->userModle->findUserByEmail($data['Email'])) {
+                if ($this->userModel->findUserByEmail($data['Email'])) {
                     $data['Email_error'] = 'Email is already exist';
                 }
             }
@@ -76,10 +76,11 @@ class Users extends Controller
                 // Hash Password
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
                 //Execute
-                if ($this->userModle->register($data)) {
+                if ($this->userModel->register($data)) {
                     //add To User table 
-                    $this->userModle->addTotableUser($data['Email']);
+                    $this->userModel->addTotableUser($data['Email']);
                     // Redirect to login
+                    flash('register_success', 'You are now registered and can log in');
                     redirect('users/login');
                 } else {
                     die('Something went wrong');
@@ -128,15 +129,37 @@ class Users extends Controller
             // Validate email
             if (empty($data['Email'])) {
                 $data['Email_error'] = 'Please enter an email';
-            }
+            } 
+
             // Validate password
             if (empty($data['password'])) {
                 $data['password_error'] = 'Please enter a password.';
             }
+
+            // Check for user/mail exist or note
+            if ($this->userModel->findUserByEmail($data['Email'])) {
+                  // User Found
+            }else {
+                // No User Found
+                $data['Email_error'] = 'This email is not registered.';
+              }
+  
+
+
             // Make sure errors are empty
             if (empty($data['passworde_error'])  && empty($data['Email_error'])) {
-                // SUCCESS - Proceed to insert
-                die('submeted');
+                // SUCCESS - Proceed to login
+ 
+                 // Check and set logged in user
+                 $loggedInUser = $this->userModel->login($data['Email'],$data['password']);
+                 if($loggedInUser){
+                    // User Authenticated!
+                    $this->createUserSession($loggedInUser);
+                  } else {
+                    $data['password_error'] = 'Password incorrect.';
+                    // Load View withe errors
+                    $this->view('users/login', $data);
+                  }
             } else {
                 // Load View
                 $this->view('users/login', $data);
@@ -155,4 +178,31 @@ class Users extends Controller
             $this->view('users/login', $data);
         }
     }
+
+
+    // Create Session With User Info
+public function createUserSession($user){
+    $_SESSION['iduser'] = $user->iduser;
+    $_SESSION['user_email'] = $user->Email; 
+    $_SESSION['user_name'] = $user->FirstName;
+    redirect('pages/mechanicalprofile');
+  }
+  
+  // Logout & Destroy Session
+  public function logout(){
+    unset($_SESSION['user_id']);
+    unset($_SESSION['user_email']);
+    unset($_SESSION['user_name']);
+    session_destroy();
+    redirect('users/login');
+  }
+  
+  // Check Logged In
+  public function isLoggedIn(){
+    if(isset($_SESSION['user_id'])){
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
