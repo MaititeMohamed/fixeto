@@ -58,7 +58,13 @@ body {
     border-color: var(--white-color);
 }
 
-
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav
+ .dropdown-menu {
+    position: absolute;
+    left: -60px !important;
+}
+}
 /* End Navbar  */
 
 
@@ -172,3 +178,5 @@ body {
 /* start profile mechanical   */
 
 /* End profile mechanical  */
+
+
