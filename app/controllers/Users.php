@@ -7,8 +7,75 @@ class Users extends Controller
         //Load model
         $this->userModel = $this->model('User');
     }
+
+     //start function for registerMechanical
+    public function registerMechanical()
+    {
+         //check for POST
+         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            //Process form
+            // Sanitize POST
+            $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            //Init Data 
+        $data = [
+            'FirstName' => trim($_POST['FirstName']),
+            'LastName' => trim($_POST['LastName']),
+            'Email' => trim($_POST['Email']),
+            'password' => trim($_POST['password']),
+            'confirm_password' => trim($_POST['confirm_password']),
+            'phone' => trim($_POST['phone']),
+            'City' => trim($_POST['City']),
+            'twitter' => trim($_POST['twitter']),
+            'instagram' => trim($_POST['instagram']),
+            'facebook' => trim($_POST['facebook']),
+            'City_error' => '',
+            'twitter_error' => '',
+            'instagram_error' => '',
+            'facebook_error' => '',
+            'FirstName_error' => '',
+            'password_error' => '',
+            'LaststName_error' => '',
+            'Email_error' => '',
+            'phone_error' => '',
+            'confirm_password_error' => '',      
+            ];
+        } else {
+            //Init Data 
+            $data = [
+                'FirstName' => '',
+                'LastName' => '',
+                'Email' => '',
+                'password' => '',
+                'confirm_password' => '',
+                'phone' => '',
+                'City' => '',
+                'twitter' => '',
+                'instagram' => '',
+                'facebook' => '',
+                'City_error' => '',
+                'twitter_error' => '',
+                'instagram_error' => '',
+                'facebook_error' => '',
+                'FirstName_error' => '',
+                'password_error' => '',
+                'LaststName_error' => '',
+                'Email_error' => '',
+                'phone_error' => '',
+                'confirm_password_error' => '', 
+
+            ];
+            //load view
+            $this->view('users/registerMechanical', $data);    
+            }
+          
+    }
+//    end function for registerMechanical
+
+
+
+
     //register methode 
-    public function register()
+    public function registerClient()
     {
         //check for POST
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -87,7 +154,7 @@ class Users extends Controller
                 }
             } else {
                 // Load View
-                $this->view('users/register', $data);
+                $this->view('users/registerClient', $data);
             }
         } else {
             //Init Data 
@@ -107,7 +174,7 @@ class Users extends Controller
 
             ];
             //load view
-            $this->view('users/register', $data);
+            $this->view('users/registerClient', $data);
         }
     }
 
