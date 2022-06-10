@@ -8,15 +8,16 @@
          // Add User / Register
      public function register($data){
         // Prepare Query
-        $this->db->query('INSERT INTO `client`( `FirstName`, `LastName`,
-         `Email`, `password`, `phone`) 
-        VALUES  (:FirstName, :LastName,:Email, :password,:phone)');
+        $this->db->query('INSERT INTO `client`( `FirstName`, `LastName`, `phone`)
+        VALUES  (:FirstName, :LastName,:phone); 
+        INSERT INTO `users`(`FirstName`,`LastName`,`Email`,`password`) 
+        VALUES(:FirstName,:LastName,:Email,:password);');
   
         // Bind Values
         $this->db->bind(':FirstName', $data['FirstName']);
         $this->db->bind(':LastName', $data['LastName']);
         $this->db->bind(':Email', $data['Email']);
-        $this->db->bind(':password', $data['password']);
+        $this->db->bind(':password',$data['password']);
         $this->db->bind(':phone', $data['phone']);
         //Execute
         if($this->db->execute()){
@@ -25,9 +26,26 @@
           return false;
         }
       }
+      
+
+
+   // create function get idC client and Update fkclient in table user
+    public function selectClientId($data){
+        $this->db->query('SELECT `idC` FROM `client` WHERE `FirstName` = :FirstName AND `LastName` = :LastName AND `phone` = :phone');
+        $this->db->bind(':FirstName', $data['FirstName']);
+        $this->db->bind(':LastName', $data['LastName']);
+        $this->db->bind(':phone', $data['phone']);
+        $row = $this->db->single();
+        $this->db->query('UPDATE `users` SET `fkclient` = :fkclient WHERE `Email` = :Email');
+        $this->db->bind(':fkclient', $row->idC);
+        $this->db->bind(':Email', $data['Email']);
+        $this->db->execute();
+      }
+
+
        // Login / Authenticate User
     public function login($Email,$password){
-      $this->db->query("SELECT * FROM client WHERE Email = :Email");
+      $this->db->query("SELECT * FROM users WHERE Email = :Email");
       $this->db->bind(':Email', $Email);
       $row = $this->db->single();
       $hashed_password = $row->password;
@@ -39,7 +57,7 @@
     }
       // Find USer BY Email
         public function findUserByEmail($Email){
-                $this->db->query("SELECT * FROM client WHERE Email = :Email");
+                $this->db->query("SELECT * FROM users WHERE Email = :Email");
                 $this->db->bind(':Email', $Email);
                 $row = $this->db->single();
                 //Check Rows
@@ -49,16 +67,21 @@
                      return false;
                 }
         }
-
-       //add to users table 
-      //  public function addTotableUser($Email){
-      //       $this->db->query("INSERT INTO users (Email,password,role) 
-      //       SELECT Email,password,role FROM client  where Email =:Email");
-      //       $this->db->bind(':Email', $Email);
-      //       $this->db->execute();
-      //  }
+     
+// part user mechanical 
 
 
+
+
+
+
+
+
+       
+
+
+
+    
 
 
 

@@ -43,7 +43,7 @@
         <!-- end dropdown  -->
       <?php else : ?>
         <li class="nav-item">
-          <a class="nav-link me-2" href="<?php echo URLROOT; ?>/users/register">Regester</a>
+          <a class="nav-link me-2" href="<?php echo URLROOT; ?>/users/login">login</a>
         </li>
        
         <?php endif; ?>

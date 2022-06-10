@@ -1,4 +1,6 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
+
+
 <!-- start form register  -->
 <div class="container-fluid  bg-light   pb-4">
 <div class="row ">

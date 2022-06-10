@@ -23,15 +23,12 @@ class Users extends Controller
                 'password' => trim($_POST['password']),
                 'phone' => trim($_POST['phone']),
                 'confirm_password' => trim($_POST['confirm_password']),
-            
                 'FirstName_error' => '',
                 'password_error' => '',
                 'LaststName_error' => '',
                 'Email_error' => '',
                 'phone_error' => '',
                 'confirm_password_error' => '',
-               
-
             ];
             // Validate FirstName
             if (empty($data['FirstName'])) {
@@ -78,10 +75,11 @@ class Users extends Controller
                 // Hash Password
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
                 //Execute
+
                 if ($this->userModel->register($data)) {
-                    //add To User table 
-                    // $this->userModel->addTotableUser($data['Email']);
+
                     // Redirect to login
+                    $this->userModel->selectClientId($data);
                     flash('register_success', 'You are now registered and can log in');
                     redirect('users/login');
                 } else {
@@ -100,14 +98,13 @@ class Users extends Controller
                 'password' => '',
                 'phone' => '',
                 'confirm_password' => '',
-                
                 'FirstName_error' => '',
                 'passworde_error' => '',
                 'LaststName_error' => '',
                 'Email_error' => '',
                 'phone_error' => '',
                 'confirm_password_error' => '',
-                
+
             ];
             //load view
             $this->view('users/register', $data);
@@ -134,41 +131,35 @@ class Users extends Controller
             // Validate email
             if (empty($data['Email'])) {
                 $data['Email_error'] = 'Please enter an email';
-            } 
+            }
 
             // Validate password
             if (empty($data['password'])) {
                 $data['password_error'] = 'Please enter a password.';
             }
-           
-
-
             // Check for user/mail exist or note
             if ($this->userModel->findUserByEmail($data['Email'])) {
-                  // User Found
-            }else {
+                // User Found
+            } else {
                 // No User Found
                 $data['Email_error'] = 'This email is not registered.';
-              }
-  
-
-
+            }
             // Make sure errors are empty
-            if (empty($data['passworde_error'])  && empty($data['Email_error']) ) {
+            if (empty($data['passworde_error'])  && empty($data['Email_error'])) {
                 // SUCCESS - Proceed to login
- 
-                 // Check and set logged in user
-               
-                 $loggedInUser = $this->userModel->login($data['Email'],$data['password']);
-                
-                 if($loggedInUser){
+
+                // Check and set logged in user
+
+                $loggedInUser = $this->userModel->login($data['Email'], $data['password']);
+
+                if ($loggedInUser) {
                     // User Authenticated!
                     $this->createUserSession($loggedInUser);
-                  } else {
+                } else {
                     $data['password_error'] = 'Password incorrect.';
                     // Load View withe errors
                     $this->view('users/login', $data);
-                  }
+                }
             } else {
                 // Load View
                 $this->view('users/login', $data);
@@ -189,29 +180,36 @@ class Users extends Controller
     }
 
 
-                    // Create Session With User Info
-                public function createUserSession($user){
-                    $_SESSION['iduser'] = $user->idC;
-                    $_SESSION['user_email'] = $user->Email; 
-                    $_SESSION['user_name'] = $user->FirstName;
-                    redirect('pages/mechanicalprofile');
-                }
-                
-                // Logout & Destroy Session
-                public function logout(){
-                    unset($_SESSION['iduser']);
-                    unset($_SESSION['user_email']);
-                    unset($_SESSION['user_name']);
-                    session_destroy();
-                    redirect('users/login');
-                }
-                
-                // Check Logged In
-                public function isLoggedIn(){
-                    if(isset($_SESSION['iduser'])){
-                    return true;
-                    } else {
-                    return false;
-                    }
-                }
+    // Create Session With User Info
+    public function createUserSession($user)
+    {
+        $_SESSION['iduser'] = $user->iduser;
+        $_SESSION['user_email'] = $user->Email;
+        $_SESSION['user_name'] = $user->FirstName;
+        if ($user->fkclient != null) {
+            redirect('pages/mechanicalprofile');
+        } else {
+            redirect('pages/index');
+        }
+    }
+
+    // Logout & Destroy Session
+    public function logout()
+    {
+        unset($_SESSION['iduser']);
+        unset($_SESSION['user_email']);
+        unset($_SESSION['user_name']);
+        session_destroy();
+        redirect('users/login');
+    }
+
+    // Check Logged In
+    public function isLoggedIn()
+    {
+        if (isset($_SESSION['iduser'])) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

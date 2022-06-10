@@ -18,15 +18,17 @@
               <span class="invalid-feedback"><?php echo $data['password_error']; ?></span>
           </div>
         
-          <div class="form-row  d-flex mt-3">
+          <div class="form-row  d-flex mt-3 ">
             <div class="col">
               <input type="submit" class="btn btn-success btn-block" value="Login">
             </div>
             <div class="col">
-              <a href="<?php echo URLROOT; ?>/users/register" class="btn btn-light btn-block">No account? Register</a>
+            <a href="<?php echo URLROOT; ?>/users/register" class="btn btn-light btn-block"> Register client</a>
             </div>
           </div>
-        </form>
+       
+        
+          </form>
       </div>
     </div>
   </div>
