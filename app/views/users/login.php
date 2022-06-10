@@ -23,7 +23,9 @@
               <input type="submit" class="btn btn-success btn-block" value="Login">
             </div>
             <div class="col">
-            <a href="<?php echo URLROOT; ?>/users/register" class="btn btn-light btn-block"> Register client</a>
+            <a href="<?php echo URLROOT; ?>/users/registerClient" class="btn btn-light btn-block"> Register client</a>
+            <a href="<?php echo URLROOT; ?>/users/registerMechanical" class="btn btn-light btn-block"> Register Mechanical</a>
+
             </div>
           </div>
        
