@@ -34,8 +34,10 @@
                 <hr class="mt-0 mb-4">
                 <div class="row pt-1">
                   <div class="col-6 mb-3"> 
-                  <button type="button" class="btn btn-danger">Delete Acount</button>
-
+                  
+                  <form class="pull-right" action="<?php echo URLROOT; ?>/Clients/deleteClient/<?= $client->idC;?>" method="post">
+                    <input type="submit" class="btn btn-danger" value="Delete Acount">
+                  </form>
                   </div>
                    <div class="col-6 mb-3">
                     <button type="button" class="btn btn-success">Update Acount</button>
