@@ -15,6 +15,20 @@ class Client extends Controller
         $ClientInfo = $this->db->resultSet();
         return $ClientInfo;
     }
-    
+     // Delete Client
+     public function deleteClient($idC){
+        // Prepare Query
+        $this->db->query('DELETE FROM client WHERE idC = :idC');
+  
+        // Bind Values
+        $this->db->bind(':idC', $idC);
+        
+        //Execute
+        if($this->db->execute()){
+          return true;
+        } else {
+          return false;
+        }
+      }
    
 }
