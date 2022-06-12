@@ -20,23 +20,7 @@
     //   $this->view('pages/about', $data);
     // }
  
-    // mechaniclist 
-    public function mechaniclist(){
-      $data = [
-        'title' => 'mechaniclist '
-      ];
-
-      $this->view('pages/mechaniclist', $data);
-    }
-    //mechanicalprofile
-   
-    public function mechanicalprofile(){
-      $data = [
-        'title' => 'mechanicalprofile '
-      ];
-
-      $this->view('pages/mechanicalprofile', $data);
-    }
+ 
     // dashboard
     public function dashboard(){
       $data = [
