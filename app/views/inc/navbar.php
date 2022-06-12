@@ -36,7 +36,7 @@
               <?php if ($_SESSION['mechanical'] != null) : ?>
 
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="<?php echo URLROOT; ?>/pages/mechanicalprofile">My profile</a></li>
+                  <li><a class="dropdown-item" href="<?php echo URLROOT; ?>/mechanicals/mechanicalprofile">My profile</a></li>
                 <?php else : ?>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="<?php echo URLROOT; ?>/clients/index">My profile</a></li>
@@ -44,7 +44,7 @@
                     <li>
                       <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="<?php echo URLROOT; ?>/pages/mechaniclist">find mechanical</a></li>
+                    <li><a class="dropdown-item" href="<?php echo URLROOT; ?>/mechanicals/mechaniclist">find mechanical</a></li>
 
                   <?php endif; ?>
                   
