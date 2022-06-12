@@ -15,6 +15,7 @@ class Client extends Controller
         $ClientInfo = $this->db->single();
         return $ClientInfo;
     }
+    
      // Delete Client
      public function deleteClient($idC){
         // Prepare Query
