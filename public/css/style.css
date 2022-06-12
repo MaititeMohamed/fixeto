@@ -57,7 +57,7 @@ body {
 .navbar .navbar-toggler[aria-expanded="true"] {
     border-color: var(--white-color);
 }
-
+/* dropdwon list  */
 @media (min-width: 992px){
 .navbar-expand-lg .navbar-nav
  .dropdown-menu {
