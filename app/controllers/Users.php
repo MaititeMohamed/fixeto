@@ -291,9 +291,7 @@ class Users extends Controller
             // Make sure errors are empty
             if (empty($data['passworde_error'])  && empty($data['Email_error'])) {
                 // SUCCESS - Proceed to login
-
                 // Check and set logged in user
-
                 $loggedInUser = $this->userModel->login($data['Email'], $data['password']);
 
                 if ($loggedInUser) {
@@ -330,12 +328,16 @@ class Users extends Controller
         $_SESSION['iduser'] = $user->iduser;
         $_SESSION['user_email'] = $user->Email;
         $_SESSION['user_name'] = $user->FirstName;
-        if ($user->fkclient != null) {
-            redirect('pages/mechanicalprofile');
-        } else {
+        $_SESSION['mechanical'] = $user->fkmechanical;
+        $_SESSION['client'] = $user->fkclient;
+        if ($user->fkclient == null && $user->fkmechanical == null) {
+            redirect('pages/dashboard');
+         }else{
             redirect('pages/index');
-        }
-    }
+         }
+    
+ 
+}
 
     // Logout & Destroy Session
     public function logout()
