@@ -21,12 +21,5 @@
     // }
  
  
-    // dashboard
-    public function dashboard(){
-      $data = [
-        'title' => 'dashboard '
-      ];
-
-      $this->view('pages/dashboard', $data);
-    }
+    
   }
