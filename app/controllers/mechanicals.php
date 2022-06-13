@@ -34,6 +34,29 @@ class mechanicals extends Controller
 
                     $this->view('mechanical/mechaniclist', $data);
                 }
+                //delet mechanical
+                public function deletemechanical($idm)
+                {
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        //Execute
+                        if ($this->mechanicalModel->delete($idm)) {
+                            //destroy session
+                            unset($_SESSION['iduser']);
+                            unset($_SESSION['user_email']);
+                            unset($_SESSION['user_name']);
+                            session_destroy();
+                            // Redirect to login
+                            flash('client_message', 'clien Removed');
+                            redirect('users/login');
+                        } else {
+                            die('Something went wrong');
+                        }
+                    } else {
+                        //redirect to mechanicalprofile
+                        redirect('mechanical/mechanicalprofile');
+                       
+                    }
+                }
 
            public function Editmechanical($idm)
            {
