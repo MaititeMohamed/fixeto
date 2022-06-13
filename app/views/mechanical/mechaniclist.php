@@ -17,15 +17,18 @@
                                 <h4 class="mb-2"><?= $mechanical->FirstName; ?>&nbsp;<?php echo  $mechanical->LastName ?></h4>
                                 <p class="text-muted mb-4">2KM <span class="mx-2">|</span> <span>3min</span></p>
                                 <div class="mb-4 pb-2">
-                                    <button type="button" class="btn btn-outline-primary btn-floating">
-                                        <i class="fab fa-facebook-f fa-lg"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-outline-primary btn-floating">
-                                        <i class="fab fa-twitter fa-lg"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-outline-primary btn-floating">
-                                        <i class="fab fa-instagram fa-lg"></i>
-                                    </button>
+                                
+                                    <a href="https://www.facebook.com/<?=$mechanical->facebook?>"  class="btn btn-outline-primary btn-floating" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-facebook-f fa-lg"></i>
+                                    </a>
+                                    
+                                    <a href="https://twitter.com/<?=$mechanical->twitter?>"  class="btn btn-outline-primary btn-floating" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-twitter fa-lg"></i>
+                                    </a>
+                                   
+                                    <a href="https://www.instagram.com/<?=$mechanical->instagram?>"  class="btn btn-outline-primary btn-floating" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-instagram fa-lg"></i>
+                                    </a>
                                 </div>
 
                                 <div class="d-flex justify-content-center mb-2">
