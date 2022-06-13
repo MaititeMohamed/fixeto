@@ -16,7 +16,13 @@ class mechanical extends Controller
         return $mechanicalinfo;
     }
 
-
+ //  get all mechanical
+ public function getAllmechanicalInfo()
+ {
+     $this->db->query('SELECT * FROM `users` INNER JOIN `mechanical` ON `users`.`fkmechanical` = `mechanical`.`idm` ');
+     $AllmechanicalInfo = $this->db->resultSet();
+     return $AllmechanicalInfo;
+ }
      // Delete mechaical
      public function delete($idm){
         // Prepare Query
@@ -58,5 +64,15 @@ class mechanical extends Controller
         } else {
             return false;
         }
+    }
+
+
+    public function getmechanicalInfoById($idm)
+    {
+        $this->db->query('SELECT * FROM `users` INNER JOIN `mechanical` ON `users`.`fkmechanical` = `mechanical`.`idm` WHERE `users`.`fkmechanical` = :idm');
+    
+        $this->db->bind(':idm', $idm);
+        $mechanicalinfo = $this->db->single();
+        return $mechanicalinfo;
     }
 }
