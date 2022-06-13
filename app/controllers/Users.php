@@ -331,7 +331,7 @@ class Users extends Controller
         $_SESSION['mechanical'] = $user->fkmechanical;
         $_SESSION['client'] = $user->fkclient;
         if ($user->fkclient == null && $user->fkmechanical == null) {
-            redirect('pages/dashboard');
+            redirect('Dashbords/dashboard');
          }else{
             redirect('pages/index');
          }
