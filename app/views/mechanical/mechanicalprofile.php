@@ -31,99 +31,10 @@
 
                                 </div>
                                 <div class="col-md-12 col-lg-3   pt-3">
-                                    <!-- start update model  -->
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        Update
-                                    </button>
+                                <a class="btn btn-success" href="<?php echo URLROOT; ?>/mechanicals/Editmechanical/<?= $data['mechanical']->idm;?>">Update Acount</a>
 
-                                    <!-- Modal -->
-                                    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Update </h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="d-flex">
-                                                        <div>
-                                                            <form action="<?php echo URLROOT; ?>/users/registerMechanical" method="post">
-                                                                <div class="form-group">
-                                                                    <!-- FirstName  -->
-                                                                    <label>FirstName:<sup>*</label>
-                                                                    <input type="text" name="FirstName" class="form-control form-control-lg <?php echo (!empty($data['FirstName_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['mechanical']->FirstName; ?>">
-                                                                    <span class="invalid-feedback"><?php echo $data['FirstName_error']; ?></span>
-                                                                </div>
-                                                                <!-- LastName -->
-                                                                <div class="form-group">
-                                                                    <label>LastName:<sup>*</label>
-                                                                    <input type="text" name="LastName" class="form-control form-control-lg <?php echo (!empty($data['LastName_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['mechanical']->LastName; ?>">
-                                                                    <span class="invalid-feedback"><?php echo $data['LastName_error']; ?></span>
-                                                                </div>
-                                                                <!-- phone -->
-                                                                <div class="form-group">
-                                                                    <label>phone:<sup>*</label>
-                                                                    <input type="text" name="phone" class="form-control form-control-lg <?php echo (!empty($data['phone_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['mechanical']->phone; ?>">
-                                                                    <span class="invalid-feedback"><?php echo $data['phone_error']; ?></span>
-                                                                </div>
-                                                                <!-- Email Address -->
-                                                                <div class="form-group">
-                                                                    <label>Email Address:<sup>*</sup></label>
-                                                                    <input type="text" name="Email" class="form-control form-control-lg <?php echo (!empty($data['Email_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['mechanical']->Email; ?>">
-                                                                    <span class="invalid-feedback"><?php echo $data['Email_error']; ?></span>
-                                                                </div>
-                                                                <!-- password -->
-                                                                <div class="form-group">
-                                                                    <label>password:<sup>*</sup></label>
-                                                                    <input type="password" name="password" class="form-control form-control-lg <?php echo (!empty($data['password_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['mechanical']->password; ?>">
-                                                                    <span class="invalid-feedback"><?php echo $data['password_error']; ?></span>
-                                                                </div>
-                                                        </div>
-                                                        <div class="ms-4">
-                                                            <!-- Confirm Password -->
-                                                            <div class="form-group">
-                                                                <label>Confirm Password:<sup>*</sup></label>
-                                                                <input type="password" name="confirm_password" class="form-control form-control-lg <?php echo (!empty($data['confirm_password_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['mechanical']->confirm_password; ?>">
-                                                                <span class="invalid-feedback"><?php echo $data['confirm_password_error']; ?></span>
-                                                            </div>
-                                                            <!-- City -->
-                                                            <div class="form-group">
-                                                                <label>City:<sup>*</sup></label>
-                                                                <input type="City" name="City" class="form-control form-control-lg <?php echo (!empty($data['City_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['mechanical']->City; ?>">
-                                                                <span class="invalid-feedback"><?php echo $data['City_error']; ?></span>
-                                                            </div>
-                                                            <!-- twitter -->
-                                                            <div class="form-group">
-                                                                <label>twitter:<sup>*</sup></label>
-                                                                <input type="twitter" name="twitter" class="form-control form-control-lg <?php echo (!empty($data['twitter_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['mechanical']->twitter; ?>">
-                                                                <span class="invalid-feedback"><?php echo $data['twitter_error']; ?></span>
-                                                            </div>
-                                                            <!-- instagram -->
-                                                            <div class="form-group">
-                                                                <label>instagram:<sup>*</sup></label>
-                                                                <input type="instagram" name="instagram" class="form-control form-control-lg <?php echo (!empty($data['instagram_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['mechanical']->instagram; ?>">
-                                                                <span class="invalid-feedback"><?php echo $data['instagram_error']; ?></span>
-                                                            </div>
-                                                            <!-- facebook -->
-                                                            <div class="form-group">
-                                                                <label>facebook:<sup>*</sup></label>
-                                                                <input type="facebook" name="facebook" class="form-control form-control-lg <?php echo (!empty($data['facebook_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['mechanical']->facebook; ?>">
-                                                                <span class="invalid-feedback"><?php echo $data['facebook_error']; ?></span>
-                                                            </div>
-                                                        </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer d-flex justify-content-center">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Update</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end update model  -->
                                 </div>
+                                   
                             <?php else : ?>
 
                                 <div class="col-md-12 col-lg-3  pb-lg-0 pb-4 pt-3 ">
