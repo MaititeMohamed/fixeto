@@ -27,8 +27,9 @@
                             <?php if ($_SESSION['mechanical'] != null) : ?>
 
                                 <div class="col-md-12 col-lg-3   pt-3">
-                                    <h2 class="text-md-center text-lg-start text-center "> <button type="button" class="btn btn-danger">Delete</button></h2>
-
+                                <form class="pull-right" action="<?php echo URLROOT; ?>/mechanicals/deletemechanical/<?= $data['mechanical']->idm; ?>" method="post">
+                                 <input type="submit" class="btn btn-danger" value="Delete Acount">
+                               </form>
                                 </div>
                                 <div class="col-md-12 col-lg-3   pt-3">
                                 <a class="btn btn-success" href="<?php echo URLROOT; ?>/mechanicals/Editmechanical/<?= $data['mechanical']->idm;?>">Update Acount</a>
