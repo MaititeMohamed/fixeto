@@ -16,6 +16,22 @@ class mechanical extends Controller
         return $mechanicalinfo;
     }
 
+
+     // Delete mechaical
+     public function delete($idm){
+        // Prepare Query
+        $this->db->query('DELETE FROM mechanical WHERE idm = :idm');
+  
+        // Bind Values
+        $this->db->bind(':idm', $idm);
+        
+        //Execute
+        if($this->db->execute()){
+          return true;
+        } else {
+          return false;
+        }
+      }
     // Edit mechanical
     public function Edit($data)
     {
