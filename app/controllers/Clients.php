@@ -127,9 +127,7 @@ class Clients extends Controller
 
                 if ($this->clientModel->Edit($data)) {
 
-                    // Redirect to login
-                   
-                    flash('register_success', 'You are now registered and can log in');
+                    // Redirect to INDEX
                     redirect('clients/index');
                 } else {
                     die('Something went wrong');
