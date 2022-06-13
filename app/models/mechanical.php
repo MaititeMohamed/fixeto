@@ -19,7 +19,7 @@ class mechanical extends Controller
  //  get all mechanical
  public function getAllmechanicalInfo()
  {
-     $this->db->query('SELECT * FROM `users` INNER JOIN `mechanical` ON `users`.`fkmechanical` = `mechanical`.`idm` ');
+     $this->db->query('SELECT * FROM `users` INNER JOIN `mechanical` ON `users`.`fkmechanical` = `mechanical`.`idm` where Active = 1');
      $AllmechanicalInfo = $this->db->resultSet();
      return $AllmechanicalInfo;
  }
