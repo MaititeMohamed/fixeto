@@ -35,10 +35,10 @@
                     <form class="pull-right" action="<?php echo URLROOT; ?>/Clients/deleteClient/<?= $data['client']->idC; ?>" method="post">
                       <input type="submit" class="btn btn-danger" value="Delete Acount">
                     </form>
+                    
                   </div>
                   <div class="col-6 mb-3">
-                    <a class="btn btn-dark" href="<?php echo URLROOT; ?>/Clients/EditClient/<?= $data['client']->idC; ?>">Update Acount</a>
-
+                    <a class="btn btn-success" href="<?php echo URLROOT; ?>/Clients/EditClient/<?= $data['client']->idC; ?>">Update Acount</a>
                   </div>
                 </div>
 
