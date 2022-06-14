@@ -6,6 +6,7 @@
         <!-- --- start card--- -->
         
                 <div class="row d-flex  h-100 ">
+                
                 <?php foreach ($data['Allmechanical'] as $mechanical) : ?>
                     <div class="col-md-12 col-lg-4">
                    
@@ -46,7 +47,7 @@
 
                   
                 </div>
-         
+                
         <!-- --- end card-- -->
         <div class="text-center">
         <button type="button" class="btn btn-primary ">  show mor </button>
