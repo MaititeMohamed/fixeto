@@ -10,7 +10,6 @@
         <div class="list-group list-group-flush my-3">
             <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
             <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-paperclip me-2"></i>Reports</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-comment-dots me-2"></i>Chat</a>
             <a href="<?php echo URLROOT; ?>/users/logout" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i class="fas fa-power-off me-2"></i>Logout</a>
         </div>
     </div>
@@ -48,7 +47,7 @@
                 <div class="col-md-3">
                     <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div>
-                            <h3 class="fs-2">720</h3>
+                            <h3 class="fs-2"><?=$data['NumberofUsers']->Numberofusers;?></h3>
                             <p class="fs-5">Users</p>
                         </div>
                         <i class="fa-solid fa-user fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -59,7 +58,7 @@
                 <div class="col-md-3">
                     <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div>
-                            <h3 class="fs-2">4920</h3>
+                            <h3 class="fs-2"><?=$data['NumberofClients']->Numberofclients;?></h3>
                             <p class="fs-5">Clients</p>
                         </div>
                         <i class="fa-solid fa-user-group fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -70,7 +69,7 @@
                 <div class="col-md-3">
                     <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                         <div>
-                            <h3 class="fs-2">3899</h3>
+                            <h3 class="fs-2"><?=$data['Numberofmechanicals']->Numberofmechanicals;?></h3>
                             <p class="fs-5">mech</p>
                         </div>
                         <i class="fa-solid fa-wrench fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -89,90 +88,33 @@
             </div>
 
             <div class="row my-5">
-                <h3 class="fs-4 mb-3">Domand register</h3>
+                <h3 class="fs-4 mb-3">Registration request</h3>
                 <div class="col">
                     <table class="table bg-white rounded shadow-sm  table-hover">
                         <thead>
                             <tr>
                                 <th scope="col" width="50">#</th>
-                                <th scope="col">Product</th>
-                                <th scope="col">Customer</th>
-                                <th scope="col">Price</th>
+                                <th scope="col">FirstName</th>
+                                <th scope="col">LastName</th>
+                                <th scope="col">City</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">status</th>
                             </tr>
                         </thead>
                         <tbody>
+                        <?php foreach($data['InActivemechanicalInfo'] as $Inactive) : ?>
+
                             <tr>
                                 <th scope="row">1</th>
-                                <td>Television</td>
-                                <td>Jonny</td>
-                                <td>$1200</td>
+                                <td><?=$Inactive->FirstName;?></td>
+                                <td><?=$Inactive->LastName;?></td>
+                                <td><?=$Inactive->City;?></td>
+                                <td><?=$Inactive->Email;?></td>
+                                <td>
+                                <a class="btn btn-success" href="<?php echo URLROOT; ?>/Dashbords/setActive/<?=$Inactive->idm;?>; ?>">Accept</a>                                    
+                                </td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Laptop</td>
-                                <td>Kenny</td>
-                                <td>$750</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Cell Phone</td>
-                                <td>Jenny</td>
-                                <td>$600</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Fridge</td>
-                                <td>Killy</td>
-                                <td>$300</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>Books</td>
-                                <td>Filly</td>
-                                <td>$120</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td>Gold</td>
-                                <td>Bumbo</td>
-                                <td>$1800</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td>Pen</td>
-                                <td>Bilbo</td>
-                                <td>$75</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">8</th>
-                                <td>Notebook</td>
-                                <td>Frodo</td>
-                                <td>$36</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">9</th>
-                                <td>Dress</td>
-                                <td>Kimo</td>
-                                <td>$255</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10</th>
-                                <td>Paint</td>
-                                <td>Zico</td>
-                                <td>$434</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">11</th>
-                                <td>Carpet</td>
-                                <td>Jeco</td>
-                                <td>$1236</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">12</th>
-                                <td>Food</td>
-                                <td>Haso</td>
-                                <td>$422</td>
-                            </tr>
+                        <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
