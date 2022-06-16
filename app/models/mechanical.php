@@ -75,4 +75,5 @@ class mechanical extends Controller
         $mechanicalinfo = $this->db->single();
         return $mechanicalinfo;
     }
+     
 }
