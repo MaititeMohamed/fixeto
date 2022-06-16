@@ -48,19 +48,7 @@ class User
       $this->db->bind(':Email', $data['Email']);
       $this->db->execute();
     }
-  // // Find USer BY Email
-  // public function findMechanicalByEmail($Email)
-  // {
-  //   $this->db->query("SELECT * FROM mechanical WHERE Email = :Email");
-  //   $this->db->bind(':Email', $Email);
-  //   $row = $this->db->single();
-  //   //Check Rows
-  //   if ($this->db->rowCount() > 0) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
+ 
 
 
 
@@ -129,18 +117,73 @@ class User
     }
   }
 
-  // part user mechanical 
+
+
+      //send message
+      public function SendMessage($data)
+      {
+        // Prepare Query
+        $this->db->query('INSERT INTO `messages` ( `fkm_idusers`,`content`)
+         VALUES (:fkm_idusers,:content );');
+
+        // Bind Values
+        $this->db->bind(':fkm_idusers',$data['iduser'] );
+        $this->db->bind(':content', $data['content']);
+
+        //Execute
+        if ($this->db->execute()) {
+          return true;
+        } else {
+          return false;
+        }
+        
+      }
+
+     
+
+
+      // report 
+      public function report($data)
+     {
+      // Prepare Query
+      $this->db->query('INSERT INTO `report` ( `fkr_idusers`,`content`)
+       VALUES (:fkr_idusers,:content );');
+
+      // Bind Values
+      $this->db->bind(':fkr_idusers',$data['iduser'] );
+      $this->db->bind(':content', $data['content']);
+
+      //Execute
+      if ($this->db->execute()) {
+        return true;
+      } else {
+        return false;
+      }
+      
+    }
 
 
 
 
 
+//sendFeedback 
+public function sendFeedback($data)
+{
+  // Prepare Query
+  $this->db->query('INSERT INTO `feedback` (`fkf_idusers`,`content`)
+   VALUES (:fkf_idusers,:content );');
 
+  // Bind Values
+  $this->db->bind(':fkf_idusers',$data['iduser'] );
+  $this->db->bind(':content', $data['content']);
 
-
-
-
-
+  //Execute
+  if ($this->db->execute()) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 
 
