@@ -93,7 +93,6 @@
                     <table class="table bg-white rounded shadow-sm  table-hover">
                         <thead>
                             <tr>
-                                <th scope="col" width="50">#</th>
                                 <th scope="col">FirstName</th>
                                 <th scope="col">LastName</th>
                                 <th scope="col">City</th>
@@ -105,7 +104,7 @@
                         <?php foreach($data['InActivemechanicalInfo'] as $Inactive) : ?>
 
                             <tr>
-                                <th scope="row">1</th>
+                                
                                 <td><?=$Inactive->FirstName;?></td>
                                 <td><?=$Inactive->LastName;?></td>
                                 <td><?=$Inactive->City;?></td>
