@@ -337,7 +337,7 @@ class Users extends Controller
          }
     
  
-}
+     }
 
     // Logout & Destroy Session
     public function logout()
@@ -348,6 +348,170 @@ class Users extends Controller
         session_destroy();
         redirect('users/login');
     }
-
    
+
+
+    // insert to table messages
+    public function sendMessage()
+    {
+        
+        //check for POST
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            //Process form
+            // Sanitize POST
+            //Init Data 
+            
+            $data = [
+
+                'content' => trim($_POST['content']),
+                'content_error' => '',
+                'iduser' => $_SESSION['iduser'],
+                'iduser_error' => ''
+
+            ];
+            // Validate message
+            if (empty($data['content'])) {
+                $data['content_error'] = 'Please enter a content.';
+            }
+          
+            // Make sure errors are empty
+            if (empty($data['content_error'])) {
+                // SUCCESS - Proceed to insert
+                // Execute
+                if ($this->userModel->SendMessage($data)) {
+                    // Redirect to login
+                    
+                    redirect('mechanicals/mechaniclist');
+                } 
+                else {
+                    die('Something went wrong');
+                }
+            } else {
+                // Load View
+                $this->view('mechanical/sendmessage', $data);
+            }
+        } else {
+            //Init Data 
+            $data = [
+
+                'content' => '',
+                'content_error' => '',
+                'iduser' => $_SESSION['iduser'],
+                'iduser_error' => ''
+
+            ];
+            //load view
+            $this->view('mechanical/sendmessage', $data);
+        }
+    }
+
+    
+    // insert to table messages
+    public function sendreport()
+    {
+        
+        //check for POST
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            //Process form
+            // Sanitize POST
+            //Init Data 
+            
+            $data = [
+
+                'content' => trim($_POST['content']),
+                'content_error' => '',
+                'iduser' => $_SESSION['iduser'],
+                'iduser_error' => ''
+
+            ];
+            // Validate message
+            if (empty($data['content'])) {
+                $data['content_error'] = 'Please enter a content.';
+            }
+          
+            // Make sure errors are empty
+            if (empty($data['content_error'])) {
+                // SUCCESS - Proceed to insert
+                // Execute
+                if ($this->userModel->report($data)) {
+                    // Redirect to login
+                    
+                    redirect('mechanicals/mechaniclist');
+                } 
+                else {
+                    die('Something went wrong');
+                }
+            } else {
+                // Load View
+                $this->view('mechanical/sendReport', $data);
+            }
+        } else {
+            //Init Data 
+            $data = [
+
+                'content' => '',
+                'content_error' => '',
+                'iduser' => $_SESSION['iduser'],
+                'iduser_error' => ''
+
+            ];
+            //load view
+            $this->view('mechanical/sendReport', $data);
+        }
+    }
+   
+    // insert to table feedback
+    public function sendFeedback()
+    {
+        
+        //check for POST
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            //Process form
+            // Sanitize POST
+            //Init Data 
+            
+            $data = [
+
+                'content' => trim($_POST['content']),
+                'content_error' => '',
+                'iduser' => $_SESSION['iduser'],
+                'iduser_error' => ''
+
+            ];
+            // Validate message
+            if (empty($data['content'])) {
+                $data['content_error'] = 'Please enter a content.';
+            }
+          
+            // Make sure errors are empty
+            if (empty($data['content_error'])) {
+                // SUCCESS - Proceed to insert
+                // Execute
+                if ($this->userModel->sendFeedback($data)) {
+                    // Redirect to login
+                    
+                    redirect('mechanicals/mechaniclist');
+                } 
+                else {
+                    die('Something went wrong');
+                }
+            } else {
+                // Load View
+                $this->view('mechanical/sendFeedback', $data);
+            }
+        } else {
+            //Init Data 
+            $data = [
+
+                'content' => '',
+                'content_error' => '',
+                'iduser' => $_SESSION['iduser'],
+                'iduser_error' => ''
+
+            ];
+            //load view
+            $this->view('mechanical/sendFeedback', $data);
+        }
+    }
+
 }
