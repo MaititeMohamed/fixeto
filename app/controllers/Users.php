@@ -460,7 +460,7 @@ class Users extends Controller
         }
     }
    
-    // insert to table feedback
+    //  /insert to table feedback
     public function sendFeedback()
     {
         
