@@ -75,5 +75,27 @@ class mechanical extends Controller
         $mechanicalinfo = $this->db->single();
         return $mechanicalinfo;
     }
-     
+
+     // select message and users info by fkm_idusers
+      public function getMessageInfoById($idm)
+      {
+        
+          $this->db->query('SELECT * FROM `users` INNER JOIN `messages` ON users.iduser=messages.fkm_idusers WHERE messages.fkm_mechanical = :idm');
+      
+          $this->db->bind(':idm', $idm);
+          $messageinfo = $this->db->resultSet();
+          return $messageinfo;
+          
+      }
+      // select message and users info and clients info by fkm_idusers
+      // public function getMessageInfoByIdAndClients($idm)
+      // {
+        
+      //     $this->db->query('SELECT * FROM `users` INNER JOIN `messages` ON `users`.`iduser` = `messages`.`fkm_idusers` INNER JOIN `clients` ON `users`.`fkclients` = `clients`.`idc` WHERE `users`.`fkmechanical` = :idm');
+      
+      //     $this->db->bind(':idm', $idm);
+      //     $messageinfo = $this->db->resultSet();
+      //     return $messageinfo;
+      // }
+
 }
