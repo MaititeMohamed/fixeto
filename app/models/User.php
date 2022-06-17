@@ -123,11 +123,12 @@ class User
       public function SendMessage($data)
       {
         // Prepare Query
-        $this->db->query('INSERT INTO `messages` ( `fkm_idusers`,`content`)
-         VALUES (:fkm_idusers,:content );');
+        $this->db->query('INSERT INTO `messages` ( `fkm_idusers`,`fkm_mechanical`,`content`)
+         VALUES (:fkm_idusers,:fkm_mechanical,:content  );');
 
         // Bind Values
         $this->db->bind(':fkm_idusers',$data['iduser'] );
+        $this->db->bind(':fkm_mechanical',$data['idm'] );
         $this->db->bind(':content', $data['content']);
 
         //Execute
