@@ -6,6 +6,7 @@ class Users extends Controller
     {
         //Load model
         $this->userModel = $this->model('User');
+        $this->mechanicalModel = $this->model('mechanical');
     }
 
     //start function for registerMechanical
@@ -352,7 +353,7 @@ class Users extends Controller
 
 
     // insert to table messages
-    public function sendMessage()
+    public function sendMessage($idm)
     {
         
         //check for POST
@@ -362,13 +363,19 @@ class Users extends Controller
             //Init Data 
             
             $data = [
-
+                'idm' => $idm,
                 'content' => trim($_POST['content']),
                 'content_error' => '',
                 'iduser' => $_SESSION['iduser'],
-                'iduser_error' => ''
+                'iduser_error' => '',
+                // 'fkm_mechanical' =>trim($_POST['content']),
+                // 'fkm_mechanical_error' => '',
 
             ];
+            // echo '<pre>';
+            // var_dump($data);
+            // echo '</pre>';
+            // exit;
             // Validate message
             if (empty($data['content'])) {
                 $data['content_error'] = 'Please enter a content.';
@@ -393,7 +400,7 @@ class Users extends Controller
         } else {
             //Init Data 
             $data = [
-
+                'idm' => $idm,
                 'content' => '',
                 'content_error' => '',
                 'iduser' => $_SESSION['iduser'],
