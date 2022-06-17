@@ -27,15 +27,45 @@
                             <?php if ($_SESSION['mechanical'] != null) : ?>
 
                                 <div class="col-md-12 col-lg-3   pt-3">
-                                <form class="pull-right" action="<?php echo URLROOT; ?>/mechanicals/deletemechanical/<?= $data['mechanical']->idm; ?>" method="post">
-                                 <input type="submit" class="btn btn-danger" value="Delete Acount">
-                               </form>
+                                    <form class="pull-right" action="<?php echo URLROOT; ?>/mechanicals/deletemechanical/<?= $data['mechanical']->idm; ?>" method="post">
+                                        <input type="submit" class="btn btn-danger" value="Delete Acount">
+                                    </form>
                                 </div>
                                 <div class="col-md-12 col-lg-3   pt-3">
-                                <a class="btn btn-success" href="<?php echo URLROOT; ?>/mechanicals/Editmechanical/<?= $data['mechanical']->idm;?>">Update Acount</a>
+                                    <a class="btn btn-success" href="<?php echo URLROOT; ?>/mechanicals/Editmechanical/<?= $data['mechanical']->idm; ?>">Update Acount</a>
 
                                 </div>
-                                   
+                                <div class="col-md-12 col-lg-3   pt-3">
+                                 <!-- start model   -->
+
+                                    <a href="<?php echo URLROOT; ?>/mechanicals/message/<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative" >
+                                        message
+                                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                            9
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                    </a>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Understood</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- end model -->
+                                </div>
                             <?php else : ?>
 
                                 <div class="col-md-12 col-lg-3  pb-lg-0 pb-4 pt-3 ">
