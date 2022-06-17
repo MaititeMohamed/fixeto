@@ -26,15 +26,12 @@ class mechanicals extends Controller
 
         $this->view('mechanical/mechanicalprofile', $data);
     }
-
+     
     // mechaniclist 
     public function mechaniclist()
     {
         $Allmechanical = $this->mechanicalModel->getAllmechanicalInfo();
-        //  echo '<pre>';
-        //  var_dump($Allmechanical);
-        //  echo '</pre>';
-        //  exit();
+        
         $data = [
             'Allmechanical' => $Allmechanical,
         ];
@@ -217,5 +214,21 @@ class mechanicals extends Controller
         $this->view('mechanical/mechanicalprofile', $data);
     }
 
-    
+       // get mechanical info by idm 
+       public function message($idm)
+       {
+           $messageInfo = $this->mechanicalModel->getMessageInfoById($idm);
+           $mechanical = $this->mechanicalModel->getmechanicalInfo();
+           $data = [
+                'idm'=>$idm,
+               'messageInfo' => $messageInfo,
+               'mechanical' => $mechanical,
+           ];
+           echo '<pre>';
+           var_dump($data);
+           echo '</pre>';
+           
+         $this->view('mechanical/mechanicalprofile', $data);
+       }
+   
 }
