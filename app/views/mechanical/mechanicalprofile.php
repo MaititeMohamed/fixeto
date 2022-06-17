@@ -36,9 +36,9 @@
 
                                 </div>
                                 <div class="col-md-12 col-lg-3   pt-3">
-                                 <!-- start model   -->
+                                    <!-- start model   -->
 
-                                    <a href="<?php echo URLROOT; ?>/mechanicals/message/<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative" >
+                                    <a href="<?php echo URLROOT; ?>/mechanicals/message/<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         message
                                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                             9
@@ -50,16 +50,23 @@
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                                    <h5 class="modal-title" id="staticBackdropLabel">your message</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    ...
+                                                    
+                                                        <?php foreach ($data['messageInfo'] as $message) : ?>
+                                                            <!--  -->
+
+                                                                    <div class="border border-dark m-3 p-2">
+                                                                    <p> from :<?= $message->FirstName ?></p>
+                                                                    <p> in :<?= $message->datemessage ?></p>
+                                                                    <p> message :<?= $message->content ?></p>
+                                                                    </div>
+                                                <?php endforeach; ?>
+                                                
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Understood</button>
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
