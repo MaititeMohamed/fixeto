@@ -224,9 +224,9 @@ class mechanicals extends Controller
                'messageInfo' => $messageInfo,
                'mechanical' => $mechanical,
            ];
-           echo '<pre>';
-           var_dump($data);
-           echo '</pre>';
+        //    echo '<pre>';
+        //    var_dump($data);
+        //    echo '</pre>';
            
          $this->view('mechanical/mechanicalprofile', $data);
        }
