@@ -35,7 +35,7 @@
                             <div class="d-flex justify-content-center mb-2">
                                 
             
-                                      <a href="<?php echo URLROOT; ?>/Users/sendMessage" class="btn btn-primary ms-2 ms-sm-1">Message</a>
+                                      <a href="<?php echo URLROOT; ?>/Users/sendMessage/<?= $mechanical->idm;?>" class="btn btn-primary ms-2 ms-sm-1">Message</a>
                                     
                                       <form class="pull-right" action="<?php echo URLROOT; ?>/mechanicals/mechanicalprofileByid/<?= $mechanical->idm; ?>" method="post">
                                       <input type="submit" class="btn btn-primary ms-2 ms-sm-1" value="Profile">
