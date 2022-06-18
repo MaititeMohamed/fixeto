@@ -368,8 +368,7 @@ class Users extends Controller
                 'content_error' => '',
                 'iduser' => $_SESSION['iduser'],
                 'iduser_error' => '',
-                // 'fkm_mechanical' =>trim($_POST['content']),
-                // 'fkm_mechanical_error' => '',
+               
 
             ];
             // echo '<pre>';
@@ -468,7 +467,7 @@ class Users extends Controller
     }
    
     //  /insert to table feedback
-    public function sendFeedback()
+    public function sendFeedback($idm)
     {
         
         //check for POST
@@ -478,7 +477,7 @@ class Users extends Controller
             //Init Data 
             
             $data = [
-
+                'idm' => $idm,
                 'content' => trim($_POST['content']),
                 'content_error' => '',
                 'iduser' => $_SESSION['iduser'],
@@ -509,7 +508,7 @@ class Users extends Controller
         } else {
             //Init Data 
             $data = [
-
+                'idm' => $idm,
                 'content' => '',
                 'content_error' => '',
                 'iduser' => $_SESSION['iduser'],
