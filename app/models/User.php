@@ -147,11 +147,12 @@ class User
       public function report($data)
      {
       // Prepare Query
-      $this->db->query('INSERT INTO `report` ( `fkr_idusers`,`content`)
-       VALUES (:fkr_idusers,:content );');
+      $this->db->query('INSERT INTO `report` ( `fkr_idusers`,`fkr_mechanical`,`content`)
+       VALUES (:fkr_idusers,:fkr_mechanical,:content );');
 
       // Bind Values
       $this->db->bind(':fkr_idusers',$data['iduser'] );
+      $this->db->bind(':fkr_mechanical',$data['idm'] );
       $this->db->bind(':content', $data['content']);
 
       //Execute
