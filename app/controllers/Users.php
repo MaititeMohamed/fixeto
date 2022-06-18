@@ -413,7 +413,7 @@ class Users extends Controller
 
     
     // insert to table messages
-    public function sendreport()
+    public function sendreport($idm)
     {
         
         //check for POST
@@ -423,14 +423,15 @@ class Users extends Controller
             //Init Data 
             
             $data = [
-
+                'idm' => $idm,
                 'content' => trim($_POST['content']),
                 'content_error' => '',
                 'iduser' => $_SESSION['iduser'],
                 'iduser_error' => ''
 
             ];
-            // Validate message
+                     
+          // Validate message
             if (empty($data['content'])) {
                 $data['content_error'] = 'Please enter a content.';
             }
@@ -439,6 +440,7 @@ class Users extends Controller
             if (empty($data['content_error'])) {
                 // SUCCESS - Proceed to insert
                 // Execute
+                
                 if ($this->userModel->report($data)) {
                     // Redirect to login
                     
@@ -454,7 +456,7 @@ class Users extends Controller
         } else {
             //Init Data 
             $data = [
-
+                'idm' => $idm,
                 'content' => '',
                 'content_error' => '',
                 'iduser' => $_SESSION['iduser'],
