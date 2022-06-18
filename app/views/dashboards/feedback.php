@@ -3,9 +3,9 @@
     <!-- Sidebar -->
     <div class="bg-white" id="sidebar-wrapper">
         <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
-        <a class="navbar-brand " href="#">
-      <img src="<?php echo URLROOT; ?>/public/img/logo/fixeto.png" />
-    </a>
+            <a class="navbar-brand " href="#">
+                <img src="<?php echo URLROOT; ?>/public/img/logo/fixeto.png" />
+            </a>
         </div>
         <div class="list-group list-group-flush my-3">
             <a href="<?php echo URLROOT; ?>/Dashbords/dashboard" class="list-group-item list-group-item-action bg-transparent second-text active"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
@@ -14,7 +14,6 @@
         </div>
     </div>
     <!-- /#sidebar-wrapper -->
-
     <!-- Page Content -->
     <div id="page-content-wrapper">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
@@ -41,49 +40,25 @@
                 </ul>
             </div>
         </nav>
-       
-     
-        <div class="container-fluid px-4">
-        
 
-            <div class="row my-5">
-                <h3 class="fs-4 mb-3">ActiveMechanical</h3>
-                <div class="col table-responsive">
-                    <table class="table bg-white rounded shadow-sm  table-hover  ">
-                        <thead>
-                            <tr>
-                                <th scope="col">FirstName</th>
-                                <th scope="col">LastName</th>
-                                <th scope="col">City</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Report/feedback</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                       <?php foreach($data['ActiveMechanical'] as $ActiveMechanical) : ?>
-                            <tr class="align-middle">
-                                
-                                <td><?=$ActiveMechanical->FirstName?></td>
-                                <td><?=$ActiveMechanical->LastName?></td>
-                                <td><?=$ActiveMechanical->City?></td>
-                                <td><?=$ActiveMechanical->Email?></td>
-                                <td>
-                                <a class="btn btn-success mt-2" href="<?php echo URLROOT; ?>/Dashbords//<?=$ActiveMechanical->idm?>">Reports</a> 
-                                <a class="btn btn-success mt-2" href="<?php echo URLROOT; ?>/Dashbords/feedback/<?=$ActiveMechanical->idm?>">Reviews</a>                                    
-                                   
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                        </tbody>
-                    </table>
+
+        <div class=" d-flex flex-wrap gap-5 justify-content-center">
+            <?php foreach ($data['feedback'] as $feed) : ?>
+                <div class="bg-white py-3 px-5 col-11 col-lg-5 ">
+                 
+                    <p>From :<?= $feed->FirstName ?></p>
+                    <p>Fedd :<?= $feed->content ?></p>
+                    <p>In :<?= $feed->datefeedback ?></p>
                 </div>
-            </div>
-
-        </div> 
-        <!-- end page content  -->
+            <?php endforeach; ?>
+        </div>
     </div>
+    
+        
+   
 </div>
-<!-- /#page-content-wrapper -->
+
+
 </div>
 
 <?php require APPROOT . '/views/dashboards/footerDash.php'; ?>

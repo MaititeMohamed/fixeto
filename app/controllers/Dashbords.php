@@ -58,4 +58,15 @@ class Dashbords extends Controller
     ];
     $this->view('dashboards/ActiveMechanical', $data);
   }
+  //feedback function
+  public function feedback($idm)
+  {
+    $feedback = $this->dashboardModel->getFeedbackInfoById($idm);
+    $data = [
+      'feedback' => $feedback 
+    ];
+   
+    $this->view('dashboards/feedback', $data);
+  }
+
 }
