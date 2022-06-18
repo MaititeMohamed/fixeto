@@ -47,6 +47,12 @@ class Dashboard
         $this->db->bind(':idm', $idm);
         $this->db->execute();
     }
-  
+  // select  mechanical where Active = 1
+    public function getActivemechanicalInfo()
+    {
+        $this->db->query('SELECT * FROM `users` INNER JOIN `mechanical` ON `users`.`fkmechanical` = `mechanical`.`idm` where Active = 1');
+        $ActivemechanicalInfo = $this->db->resultSet();
+        return $ActivemechanicalInfo;
+    }
 
   }
