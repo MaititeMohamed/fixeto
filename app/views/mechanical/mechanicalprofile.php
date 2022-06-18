@@ -41,7 +41,7 @@
                                     <a href="<?php echo URLROOT; ?>/mechanicals/message/<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative">
                                         message
                                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                            <?= $data['numberOfMessage']->Numbermessage; ?>
+                                            <?= $data['numberOfMessage']->Numbermessage ?>
 
                                         </span>
                                     </a>
@@ -50,7 +50,7 @@
                                 <div class="col-md-12 col-lg-3   pt-3">
                                     <!-- start model   -->
 
-                                    <a href="<?php echo URLROOT; ?>/mechanicals/feedback<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative">
+                                    <a href="<?php echo URLROOT; ?>/mechanicals/feedback/<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative">
                                         feedback
 
                                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -70,7 +70,7 @@
 
                                 <div class="col-md-12 col-lg-3   pt-3">
                                     <!-- <h2 class="text-md-center text-lg-start text-center "> <button type="button" class="btn btn-primary">FEDBACK</button></h2> -->
-                                    <a href="<?php echo URLROOT; ?>/Users/sendFeedback" class="btn btn-primary ms-2 ms-sm-1">FEDBACK</a>
+                                    <a href="<?php echo URLROOT; ?>/Users/sendFeedback/<?= $data['mechanical']->idm; ?>" class="btn btn-primary ms-2 ms-sm-1">FEDBACK</a>
 
                                 </div>
 
