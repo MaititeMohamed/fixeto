@@ -218,7 +218,7 @@ class mechanicals extends Controller
         $this->view('mechanical/mechanicalprofile', $data);
     }
 
-       // get mechanical info by idm 
+       // get message info by idm 
        public function message($idm)
        {
            $messageInfo = $this->mechanicalModel->getMessageInfoById($idm);
@@ -233,7 +233,17 @@ class mechanicals extends Controller
            
          $this->view('mechanical/messagemechanical', $data);
        }
-
+ //get feedback info by idm
+    public function feedbackinfo($idm)
+    {
+        $feedbackInfo = $this->mechanicalModel->getFeedbackInfoById($idm);
     
-   
+        $data = [
+            'feedbackInfo' => $feedbackInfo,
+    
+        ];
+
+              
+    $this->view('mechanical/feebackinfomechanical', $data);
+ }
 }
