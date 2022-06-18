@@ -86,15 +86,14 @@ class mechanical
           
       }
       // select message and users info by fkm_idusers
-    //   public function getNumberMessage($idm)
-    //   {
-        
-    //     $this->db->query('SELECT count(*) FROM `users` INNER JOIN `messages` ON users.iduser=messages.fkm_idusers WHERE messages.fkm_mechanical = :idm');
+      public function getNumberMessage($idm)
+      {
+        $this->db->query('SELECT count(*) as Numbermessage FROM `users` INNER JOIN `messages` ON users.iduser=messages.fkm_idusers WHERE messages.fkm_mechanical = :idm');
       
-    //     $this->db->bind(':idm', $idm);
-    //     $messageinfo = $this->db->resultSet();
-    //     return $messageinfo;
+        $this->db->bind(':idm', $idm);
+        $messageinfo = $this->db->single();
+        return $messageinfo;
           
-    //   }
+      }
 
 }
