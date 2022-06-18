@@ -1,6 +1,6 @@
 <?php
 
-class mechanical extends Controller
+class mechanical 
 {
     private $db;
     public function __construct()
@@ -79,23 +79,22 @@ class mechanical extends Controller
      // select message and users info by fkm_idusers
       public function getMessageInfoById($idm)
       {
-        
-          $this->db->query('SELECT * FROM `users` INNER JOIN `messages` ON users.iduser=messages.fkm_idusers WHERE messages.fkm_mechanical = :idm');
-      
-          $this->db->bind(':idm', $idm);
-          $messageinfo = $this->db->resultSet();
-          return $messageinfo;
+        $this->db->query('SELECT * FROM `users` INNER JOIN `messages` ON users.iduser=messages.fkm_idusers WHERE messages.fkm_mechanical = :idm');
+        $this->db->bind(':idm', $idm);
+        $messageinfo = $this->db->resultSet();
+        return $messageinfo;
           
       }
-      // select message and users info and clients info by fkm_idusers
-      // public function getMessageInfoByIdAndClients($idm)
-      // {
+      // select message and users info by fkm_idusers
+    //   public function getNumberMessage($idm)
+    //   {
         
-      //     $this->db->query('SELECT * FROM `users` INNER JOIN `messages` ON `users`.`iduser` = `messages`.`fkm_idusers` INNER JOIN `clients` ON `users`.`fkclients` = `clients`.`idc` WHERE `users`.`fkmechanical` = :idm');
+    //     $this->db->query('SELECT count(*) FROM `users` INNER JOIN `messages` ON users.iduser=messages.fkm_idusers WHERE messages.fkm_mechanical = :idm');
       
-      //     $this->db->bind(':idm', $idm);
-      //     $messageinfo = $this->db->resultSet();
-      //     return $messageinfo;
-      // }
+    //     $this->db->bind(':idm', $idm);
+    //     $messageinfo = $this->db->resultSet();
+    //     return $messageinfo;
+          
+    //   }
 
 }
