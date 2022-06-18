@@ -228,7 +228,20 @@ class mechanicals extends Controller
         //    var_dump($data);
         //    echo '</pre>';
            
-         $this->view('mechanical/mechanicalprofile', $data);
+         $this->view('mechanical/messagemechanical', $data);
        }
+
+       //get number of message
+        //  public function getNumberOfMessage($idm)
+        //  {
+        //       $numberOfMessage = $this->mechanicalModel->getNumberOfMessage($idm);
+        //       $data = [
+        //         'numberOfMessage' => $numberOfMessage,
+        //       ];
+        //       echo '<pre>';
+        //       var_dump($data);
+        //     echo '</pre>';
+        //       $this->view('mechanical/mechanicalprofile', $data);
+        //  }
    
 }
