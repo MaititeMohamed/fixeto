@@ -38,40 +38,14 @@
                                 <div class="col-md-12 col-lg-3   pt-3">
                                     <!-- start model   -->
 
-                                    <a href="<?php echo URLROOT; ?>/mechanicals/message/<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    <a href="<?php echo URLROOT; ?>/mechanicals/message/<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative" >
                                         message
                                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                            9
-                                            <span class="visually-hidden">unread messages</span>
+                                            2
+                                            
                                         </span>
                                     </a>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="staticBackdropLabel">your message</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    
-                                                        <?php foreach ($data['messageInfo'] as $message) : ?>
-                                                            <!--  -->
-
-                                                                    <div class="border border-dark m-3 p-2">
-                                                                    <p> from :<?= $message->FirstName ?></p>
-                                                                    <p> in :<?= $message->datemessage ?></p>
-                                                                    <p> message :<?= $message->content ?></p>
-                                                                    </div>
-                                                <?php endforeach; ?>
-                                                
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- end model -->
+                               
                                 </div>
                             <?php else : ?>
 
