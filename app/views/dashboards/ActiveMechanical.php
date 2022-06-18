@@ -68,7 +68,7 @@
                                 <td><?=$ActiveMechanical->City?></td>
                                 <td><?=$ActiveMechanical->Email?></td>
                                 <td>
-                                <a class="btn btn-success mt-2" href="<?php echo URLROOT; ?>/Dashbords//<?=$ActiveMechanical->idm?>">Reports</a> 
+                                <a class="btn btn-success mt-2" href="<?php echo URLROOT; ?>/Dashbords/Reports/<?=$ActiveMechanical->idm?>">Reports</a> 
                                 <a class="btn btn-success mt-2" href="<?php echo URLROOT; ?>/Dashbords/feedback/<?=$ActiveMechanical->idm?>">Reviews</a>                                    
                                    
                                 </td>
