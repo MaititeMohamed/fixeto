@@ -1,6 +1,6 @@
 <?php
 
-class Client extends Controller
+class Client
 {
     private $db;
     public function __construct()
