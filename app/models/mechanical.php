@@ -85,7 +85,7 @@ class mechanical
         return $messageinfo;
           
       }
-      // select message and users info by fkm_idusers
+      // number of message
       public function getNumberMessage($idm)
       {
         $this->db->query('SELECT count(*) as Numbermessage FROM `users` INNER JOIN `messages` ON users.iduser=messages.fkm_idusers WHERE messages.fkm_mechanical = :idm');
@@ -103,5 +103,13 @@ class mechanical
         $feedbackinfo = $this->db->resultSet();
         return $feedbackinfo;
       }
-
+  //nymber of feedback
+      public function getNumberfeedback($idm)
+      {
+        $this->db->query('SELECT count(*) as Numberfeedback FROM `users` INNER JOIN `feedback` ON users.iduser=feedback.fkf_idusers WHERE feedback.fkf_mechanical = :idm');
+        $this->db->bind(':idm', $idm);
+        $feedbackinfo = $this->db->single();
+        return $feedbackinfo;
+      }
+    
 }
