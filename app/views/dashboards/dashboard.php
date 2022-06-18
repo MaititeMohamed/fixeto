@@ -8,8 +8,8 @@
     </a>
         </div>
         <div class="list-group list-group-flush my-3">
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-paperclip me-2"></i>Reports</a>
+            <a href="<?php echo URLROOT; ?>/Dashbords/dashboard" class="list-group-item list-group-item-action bg-transparent second-text active"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+            <a href="<?php echo URLROOT; ?>/Dashbords/reports" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-paperclip me-2"></i>Reports</a>
             <a href="<?php echo URLROOT; ?>/users/logout" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i class="fas fa-power-off me-2"></i>Logout</a>
         </div>
     </div>
@@ -89,8 +89,8 @@
 
             <div class="row my-5">
                 <h3 class="fs-4 mb-3">Registration request</h3>
-                <div class="col">
-                    <table class="table bg-white rounded shadow-sm  table-hover">
+                <div class="col table-responsive">
+                    <table class="table bg-white rounded shadow-sm  table-hover  ">
                         <thead>
                             <tr>
                                 <th scope="col">FirstName</th>
@@ -124,4 +124,5 @@
 </div>
 <!-- /#page-content-wrapper -->
 </div>
+
 <?php require APPROOT . '/views/dashboards/footerDash.php'; ?>
