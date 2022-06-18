@@ -54,7 +54,7 @@ class Dashboard
         $ActivemechanicalInfo = $this->db->resultSet();
         return $ActivemechanicalInfo;
     }
-    // select  mechanical where Active = 1
+    // getFeedbackInfoById
     public function getFeedbackInfoById($idm)
     {
       $this->db->query('SELECT * FROM `users` INNER JOIN `feedback` ON users.iduser=feedback.fkf_idusers WHERE feedback.fkf_mechanical = :idm');
@@ -62,5 +62,13 @@ class Dashboard
       $feedbackinfo = $this->db->resultSet();
       return $feedbackinfo;
     }
+     // getreportById
+     public function getreportById($idm)
+     {
+       $this->db->query('SELECT * FROM `users` INNER JOIN `report` ON users.iduser=report.fkr_idusers WHERE report.fkr_mechanical = :idm');
+       $this->db->bind(':idm', $idm);
+       $feedbackinfo = $this->db->resultSet();
+       return $feedbackinfo;
+     }
 
   }
