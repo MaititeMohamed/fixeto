@@ -47,8 +47,8 @@ class Dashbords extends Controller
     redirect('dashboards/dashboard');
   }
 
-  //Reports
-  public function reports()
+  //ActiveMechanical
+  public function ActiveMechanical()
   {
     // echo 'im in the function ';
     // exit;
@@ -56,6 +56,6 @@ class Dashbords extends Controller
     $data = [
       'ActiveMechanical' => $ActiveMechanical
     ];
-    $this->view('dashboards/Report', $data);
+    $this->view('dashboards/ActiveMechanical', $data);
   }
 }
