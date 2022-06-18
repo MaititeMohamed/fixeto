@@ -1,7 +1,7 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
       
         <div class="container">
-        <form action="<?= URLROOT?>/Users/sendFeedback" method="post" class="container  mt-5 mb-5">
+        <form action="<?= URLROOT?>/Users/sendFeedback/<?php echo $data['idm']; ?>" method="post" class="container  mt-5 mb-5">
         <div class="form-floating">
         <textarea class="form-control <?php echo (!empty($data['content_error'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['content']; ?>"
          name="content" placeholder="Leave a comment here" id="floatingTextarea"
