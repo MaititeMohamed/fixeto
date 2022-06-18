@@ -1,6 +1,6 @@
 <?php
 
-class Dashboard extends Controller
+class Dashboard 
 {
     private $db;
     public function __construct()
