@@ -9,7 +9,7 @@
         </div>
         <div class="list-group list-group-flush my-3">
             <a href="<?php echo URLROOT; ?>/Dashbords/dashboard" class="list-group-item list-group-item-action bg-transparent second-text active"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-            <a href="<?php echo URLROOT; ?>/Dashbords/reports" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-paperclip me-2"></i>Reports</a>
+            <a href="<?php echo URLROOT; ?>/Dashbords/ActiveMechanical" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-paperclip me-2"></i>ActiveMechanical</a>
             <a href="<?php echo URLROOT; ?>/users/logout" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i class="fas fa-power-off me-2"></i>Logout</a>
         </div>
     </div>
