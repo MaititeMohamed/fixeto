@@ -50,7 +50,7 @@
                                 <div class="col-md-12 col-lg-3   pt-3">
                                     <!-- start model   -->
 
-                                    <a href="<?php echo URLROOT; ?>/mechanicals/feedback/<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative">
+                                    <a href="<?php echo URLROOT; ?>/mechanicals/feedbackinfo/<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative">
                                         feedback
 
                                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -64,7 +64,7 @@
 
                                 <div class="col-md-12 col-lg-3  pb-lg-0 pb-4 pt-3 ">
                                     <!-- <h2 class="text-md-center text-lg-start text-center "> <button type="button" class="btn btn-primary">REPORT</button></h2> -->
-                                    <a href="<?php echo URLROOT; ?>/Users/sendreport" class="btn btn-primary ms-2 ms-sm-1">REPORT</a>
+                                    <a href="<?php echo URLROOT; ?>/Users/sendreport/<?= $data['mechanical']->idm; ?>" class="btn btn-primary ms-2 ms-sm-1">REPORT</a>
 
                                 </div>
 
