@@ -40,11 +40,21 @@
                 </ul>
             </div>
         </nav>
-    <!-- Page Content -->
+    
+    <div class=" d-flex flex-wrap gap-5 justify-content-center">
+            <?php foreach ($data['Reports'] as $report) : ?>
+                <div class="bg-white py-3 px-5 col-11 col-lg-5 ">
+                 
+                    <p>From :<?= $report->FirstName ?></p>
+                    <p>report :<?= $report->content ?></p>
+                    <p>In :<?= $report->datereport ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
    
     </div>
 </div>
-<!-- /#page-content-wrapper -->
+
 </div>
 
 <?php require APPROOT . '/views/dashboards/footerDash.php'; ?>
