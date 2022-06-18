@@ -16,14 +16,18 @@ class mechanicals extends Controller
     public function mechanicalprofile()
     {
         $mechanical = $this->mechanicalModel->getmechanicalInfo();
-        //  echo '<pre>';
-        //  var_dump($mechanical);
-        //  echo '</pre>';
-        //  exit();
+        $numberOfMessage = $this->mechanicalModel->getNumberMessage($_SESSION['mechanical']);
+
+
+        
         $data = [
             'mechanical' => $mechanical,
+            'numberOfMessage' => $numberOfMessage,
         ];
-
+        // echo '<pre>';
+        // var_dump($data);
+        // echo '</pre>';
+        // exit();
         $this->view('mechanical/mechanicalprofile', $data);
     }
      
@@ -218,11 +222,10 @@ class mechanicals extends Controller
        public function message($idm)
        {
            $messageInfo = $this->mechanicalModel->getMessageInfoById($idm);
-           $mechanical = $this->mechanicalModel->getmechanicalInfo();
+
            $data = [
-                'idm'=>$idm,
                'messageInfo' => $messageInfo,
-               'mechanical' => $mechanical,
+             
            ];
         //    echo '<pre>';
         //    var_dump($data);
@@ -231,17 +234,6 @@ class mechanicals extends Controller
          $this->view('mechanical/messagemechanical', $data);
        }
 
-       //get number of message
-        //  public function getNumberOfMessage($idm)
-        //  {
-        //       $numberOfMessage = $this->mechanicalModel->getNumberOfMessage($idm);
-        //       $data = [
-        //         'numberOfMessage' => $numberOfMessage,
-        //       ];
-        //       echo '<pre>';
-        //       var_dump($data);
-        //     echo '</pre>';
-        //       $this->view('mechanical/mechanicalprofile', $data);
-        //  }
+    
    
 }
