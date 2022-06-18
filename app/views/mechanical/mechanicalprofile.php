@@ -38,14 +38,27 @@
                                 <div class="col-md-12 col-lg-3   pt-3">
                                     <!-- start model   -->
 
-                                    <a href="<?php echo URLROOT; ?>/mechanicals/message/<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative" >
+                                    <a href="<?php echo URLROOT; ?>/mechanicals/message/<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative">
                                         message
                                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                            2
-                                            
+                                            <?= $data['numberOfMessage']->Numbermessage; ?>
+
                                         </span>
                                     </a>
-                               
+
+                                </div>
+                                <div class="col-md-12 col-lg-3   pt-3">
+                                    <!-- start model   -->
+
+                                    <a href="<?php echo URLROOT; ?>/mechanicals/feedback<?= $data['mechanical']->idm; ?>" type="button" class="btn btn-primary position-relative">
+                                        feedback
+
+                                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                            2
+
+                                        </span>
+                                    </a>
+
                                 </div>
                             <?php else : ?>
 
