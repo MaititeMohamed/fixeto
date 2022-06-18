@@ -171,11 +171,12 @@ class User
 public function sendFeedback($data)
 {
   // Prepare Query
-  $this->db->query('INSERT INTO `feedback` (`fkf_idusers`,`content`)
-   VALUES (:fkf_idusers,:content );');
+  $this->db->query('INSERT INTO `feedback` (`fkf_idusers`,`fkf_mechanical`,`content`)
+   VALUES (:fkf_idusers,:fkf_mechanical,:content );');
 
   // Bind Values
   $this->db->bind(':fkf_idusers',$data['iduser'] );
+  $this->db->bind(':fkf_mechanical', $data['idm']);
   $this->db->bind(':content', $data['content']);
 
   //Execute
