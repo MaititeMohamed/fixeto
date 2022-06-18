@@ -17,10 +17,11 @@ class mechanicals extends Controller
     {
         $mechanical = $this->mechanicalModel->getmechanicalInfo();
         $numberOfMessage = $this->mechanicalModel->getNumberMessage($_SESSION['mechanical']);
-
+        $numberOfFeedback = $this->mechanicalModel->getNumberFeedback($_SESSION['mechanical']);
 
         
         $data = [
+            'numberoffeedback' => $numberOfFeedback,
             'mechanical' => $mechanical,
             'numberOfMessage' => $numberOfMessage,
         ];
