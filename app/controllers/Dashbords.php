@@ -19,17 +19,17 @@ class Dashbords extends Controller
   public function dashboard()
   {
     //git client
-    $NumberofUsers = $this->dashboardModel-> getNumberOfUsers();
-    $NumberofClients = $this->dashboardModel-> getNumberOfClients();
-    $NumberofMechanicals = $this->dashboardModel-> getNumberOfMechanicals();
-    $InActivemechanicalInfo = $this->dashboardModel-> getInActivemechanicalInfo();
-    
-      //  echo '<pre>';
-      //   var_dump($InActivemechanicalInfo);
-      //   echo '</pre>';
-      // exit();
+    $NumberofUsers = $this->dashboardModel->getNumberOfUsers();
+    $NumberofClients = $this->dashboardModel->getNumberOfClients();
+    $NumberofMechanicals = $this->dashboardModel->getNumberOfMechanicals();
+    $InActivemechanicalInfo = $this->dashboardModel->getInActivemechanicalInfo();
+
+    //  echo '<pre>';
+    //   var_dump($InActivemechanicalInfo);
+    //   echo '</pre>';
+    // exit();
     $data = [
-      'Numberofmechanicals' =>$NumberofMechanicals,
+      'Numberofmechanicals' => $NumberofMechanicals,
       'NumberofClients' => $NumberofClients,
       'NumberofUsers' => $NumberofUsers,
       'InActivemechanicalInfo' => $InActivemechanicalInfo
@@ -40,10 +40,22 @@ class Dashbords extends Controller
   }
 
   // create methode setActive
-public function setActive($idm)
-{
-  $this->dashboardModel->setActive($idm);
-  
-  redirect('dashboards/dashboard');
-}
+  public function setActive($idm)
+  {
+    $this->dashboardModel->setActive($idm);
+
+    redirect('dashboards/dashboard');
+  }
+
+  //Reports
+  public function reports()
+  {
+    // echo 'im in the function ';
+    // exit;
+    $ActiveMechanical = $this->dashboardModel->getActivemechanicalInfo();
+    $data = [
+      'ActiveMechanical' => $ActiveMechanical
+    ];
+    $this->view('dashboards/Report', $data);
+  }
 }
