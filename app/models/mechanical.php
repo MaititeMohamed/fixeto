@@ -95,5 +95,13 @@ class mechanical
         return $messageinfo;
           
       }
+      //get feedback by fkm_idusers
+      public function getFeedbackInfoById($idm)
+      {
+        $this->db->query('SELECT * FROM `users` INNER JOIN `feedback` ON users.iduser=feedback.fkf_idusers WHERE feedback.fkf_mechanical = :idm');
+        $this->db->bind(':idm', $idm);
+        $feedbackinfo = $this->db->resultSet();
+        return $feedbackinfo;
+      }
 
 }
