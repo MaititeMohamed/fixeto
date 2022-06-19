@@ -10,7 +10,7 @@
 
 <div class="row">
 <?php foreach ($data['messageInfo'] as $message) : ?>
-  <div class="col-sm-6 mb-3 me-2 ">
+  <div class="col-sm-6 mt-2 mb-2">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">your message</h5>

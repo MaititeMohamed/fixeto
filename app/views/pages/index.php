@@ -63,6 +63,9 @@
         <h3>Fixeto</h3>
         <h1 class=" text-primary">About Us</h1>
         <p>An electronic platform that allows road users to reach the mechanic easily and in less time.
+        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate
+         the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum
+          may be used as a placeholder before final copy is available.
         </p>
       </div>
     </div>
