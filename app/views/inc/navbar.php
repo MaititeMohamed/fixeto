@@ -71,3 +71,15 @@
     </div>
   </div>
 </nav>
+<style>
+
+  /* validation  */
+.Danger{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+  }
+</style>
