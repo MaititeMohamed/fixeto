@@ -63,13 +63,13 @@
 
                                 <div class="col-md-12 col-lg-3  pb-lg-0 pb-4 pt-3 ">
                                     <!-- <h2 class="text-md-center text-lg-start text-center "> <button type="button" class="btn btn-primary">REPORT</button></h2> -->
-                                    <a href="<?php echo URLROOT; ?>/Users/sendreport/<?= $data['mechanical']->idm; ?>" class="btn btn-primary ms-2 ms-sm-1">REPORT</a>
+                                    <a href="<?php echo URLROOT; ?>/Clients/sendreport/<?= $data['mechanical']->idm; ?>" class="btn btn-primary ms-2 ms-sm-1">REPORT</a>
 
                                 </div>
 
                                 <div class="col-md-12 col-lg-3   pt-3">
                                     <!-- <h2 class="text-md-center text-lg-start text-center "> <button type="button" class="btn btn-primary">FEDBACK</button></h2> -->
-                                    <a href="<?php echo URLROOT; ?>/Users/sendFeedback/<?= $data['mechanical']->idm; ?>" class="btn btn-primary ms-2 ms-sm-1">FEDBACK</a>
+                                    <a href="<?php echo URLROOT; ?>/Clients/sendFeedback/<?= $data['mechanical']->idm; ?>" class="btn btn-primary ms-2 ms-sm-1">FEDBACK</a>
 
                                 </div>
 
