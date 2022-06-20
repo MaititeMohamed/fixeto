@@ -20,6 +20,7 @@
         <button type="button" class="btn btn-warning">Service</button>
       </div>
     </div>
+   
     <div class="carousel-item">
 
       <img src="<?php echo URLROOT; ?>/public/img/slider/image_02.jpg" class="d-block w-100 " alt="img">
@@ -62,6 +63,7 @@
       <div class="mt-4   ">
         <h3>Fixeto</h3>
         <h1 class=" text-primary">About Us</h1>
+       
         <p>An electronic platform that allows road users to reach the mechanic easily and in less time.
         In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate
          the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum

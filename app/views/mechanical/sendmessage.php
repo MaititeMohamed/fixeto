@@ -21,4 +21,6 @@
      
         </div>
         
+        <div class="position-absolute bottom-0 w-100">
 <?php require APPROOT . '/views/inc/footer.php'; ?>
+</div>

@@ -4,6 +4,7 @@ class Users extends Controller
 
     public function __construct()
     {
+      
         //Load model
         $this->userModel = $this->model('User');
         $this->mechanicalModel = $this->model('mechanical');
@@ -15,8 +16,6 @@ class Users extends Controller
         //check for POST
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //Process form
-            // Sanitize POST
-            $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             //Init Data 
             $data = [
                 'FirstName' => trim($_POST['FirstName']),
@@ -158,8 +157,7 @@ class Users extends Controller
         //check for POST
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //Process form
-            // Sanitize POST
-            $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+           
             //Init Data 
             $data = [
                 'FirstName' => trim($_POST['FirstName']),
@@ -262,8 +260,6 @@ class Users extends Controller
         //check for POST
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //Process form
-            // Sanitize POST
-            $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             //Init Data 
             $data = [
 
@@ -359,7 +355,6 @@ class Users extends Controller
         //check for POST
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //Process form
-            // Sanitize POST
             //Init Data 
             
             $data = [
@@ -475,7 +470,6 @@ class Users extends Controller
         //check for POST
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             //Process form
-            // Sanitize POST
             //Init Data 
             
             $data = [

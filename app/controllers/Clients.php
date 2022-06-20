@@ -64,10 +64,7 @@ class Clients extends Controller
     {
         //check for POST
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            //Process form
-            // Sanitize POST
-            $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-            
+            //Process form            
             //Init Data 
             $data = [
                 'idC'=>$idC,

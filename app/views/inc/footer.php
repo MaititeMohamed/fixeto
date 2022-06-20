@@ -1,6 +1,6 @@
 <!-- start footer  -->
 <!-- Footer -->
-<footer class=" text-center text-white mb-0  " style="background-color:#0083DE; ">
+<footer class=" text-center text-white  " style="background-color:#0083DE; ">
   <!-- Grid container -->
   <div class="container p-4">
     <!-- Section: Social media -->
