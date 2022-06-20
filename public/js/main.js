@@ -13,6 +13,7 @@ function valdateemail(){
     let mail = email.value;
     if (mail == "" && !mail.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)) {
         email.classList.add("Danger");
+        inputVnum--;
     } 
     else {
         email.classList.remove("Danger");
@@ -23,7 +24,7 @@ function valdateemail(){
 function validatepass() {
     let pass = Password.value;
     if (pass == "" && !pass.match(/^[0-9]{6}$/)) {
-    
+        inputVnum--;
     Password.classList.add("Danger");
     } else {
     Password.classList.remove("Danger"); 
@@ -36,5 +37,7 @@ function validatepass() {
     function activelogin(){
         if(inputVnum==2){
             login.disabled=false;
+        }else{
+            login.disabled=true;
         }
     }
